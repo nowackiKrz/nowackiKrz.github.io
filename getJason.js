@@ -68,9 +68,9 @@ function weatherResults (data) {
                     });
                 };
         */
-      var  $j = jQuery.noConflict();
+      //var  $j = jQuery.noConflict();
 
-        $j.getJSON("http://api.wunderground.com/api/55b1f2cf5780cb8a/conditions/q//" + inputValue + ".json", function(data) {
+        $.getJSON("http://api.wunderground.com/api/55b1f2cf5780cb8a/conditions/q//" + inputValue + ".json", function(data) {
 
             //console.log(data);
 
@@ -118,7 +118,7 @@ function weatherResults (data) {
                         //console.log(this.previousElementSibling.dataset.manyResultLink);
 
 
-                        $j.getJSON("http://api.wunderground.com/api/55b1f2cf5780cb8a/conditions/" + this.previousElementSibling.dataset.manyResultLink, function(data) {
+                        $.getJSON("http://api.wunderground.com/api/55b1f2cf5780cb8a/conditions/" + this.previousElementSibling.dataset.manyResultLink, function(data) {
 
                           weatherResults (data);
 
