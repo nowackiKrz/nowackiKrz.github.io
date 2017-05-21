@@ -193,9 +193,6 @@ input {
 .clouds {
   display: block;
   opacity: 0.8;
-  -webkit-animation: animateCloud 35s linear infinite;
-  -moz-animation: animateCloud 35s linear infinite;
-  animation: animateCloud 35s linear infinite;
 }
 
 
@@ -254,7 +251,9 @@ input {
 }
 
 .x2 {
-
+	-webkit-animation: animateCloud 20s linear infinite;
+	-moz-animation: animateCloud 20s linear infinite;
+	animation: animateCloud 20s linear infinite;
 
 	-webkit-transform: scale(0.3);
 	-moz-transform: scale(0.3);
@@ -262,7 +261,10 @@ input {
 }
 
 .x3 {
-
+	-webkit-animation: animateCloud 30s linear infinite;
+	-moz-animation: animateCloud 30s linear infinite;
+	animation: animateCloud 30s linear infinite;
+  animation-timing-function: ease-in-out;
 
 	-webkit-transform: scale(0.5);
 	-moz-transform: scale(0.5);

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var body = document.querySelector("body");
     var weatherIco = document.querySelector("#weatherIco");
-    var clouds = document.querySelector("#clouds");
+    var clouds = document.querySelector(".clouds");
     var input = document.querySelector("#input");
     //var inputValue = input.value;
     var searchButton = document.getElementById('searchButton');
@@ -35,8 +35,7 @@ function weatherResults (data) {
   } else if (weather.includes("Clou") == true || weather.includes("Overcast") == true  ) { //zamiast indexOf porownuje za pmoca includes bo w tym json odmieniają slowo cloud
       body.setAttribute("class", "rain");
       weatherIco.setAttribute("class", "cloud");
-      weatherIco.setAttribute("class", "clouds");
-      //clouds.style.display = 'block';
+      clouds.style.display = 'block';
       //weatherIco.classList.add("drop");
       //weatherIco.className += " drop";
 
