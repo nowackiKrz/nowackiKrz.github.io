@@ -23,6 +23,7 @@ function weatherResults (data) {
   var temp = data.current_observation.temp_c;
   var weather = data.current_observation.weather;
   var rainKm = data.current_observation.wind_gust_kph;
+  clouds.classList.toggle("clouds");
 
 
   output = document.querySelector("#output");
@@ -34,7 +35,7 @@ function weatherResults (data) {
   } else if (weather.includes("Clou") == true || weather.includes("Overcast") == true  ) { //zamiast indexOf porownuje za pmoca includes bo w tym json odmieniają slowo cloud
       body.setAttribute("class", "rain");
       weatherIco.setAttribute("class", "cloud");
-      clouds.classList.toggle("clouds");
+      clouds.setAttribute("class", "clouds");
       //weatherIco.classList.add("drop");
       //weatherIco.className += " drop";
 
