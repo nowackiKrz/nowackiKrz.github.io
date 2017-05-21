@@ -1,0 +1,98 @@
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5jc3MiLCJzb3VyY2VzIjpbIm1haW4uc2NzcyJdLCJzb3VyY2VzQ29udGVudCI6WyJcbiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIn0= */
+.clouds {
+  display: none;
+  opacity: 0.8;
+}
+
+
+.cloudFlow {
+  width: 200px;
+  height: 80px;
+  background-color: lightblue;
+  background: #f2f9fe;
+
+	background: linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -webkit-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -moz-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -ms-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -o-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+  border-radius: 100px;
+  position: relative;
+
+
+}
+
+.cloudFlow:after, .cloudFlow:before {
+	content: '';
+	position: absolute;
+	background: #f2f9fe;
+	z-index: -1
+}
+
+.cloudFlow::before {
+  width: 80px;
+  height: 80px;
+
+  border-radius: 100%;
+  top: -30px;
+  left: 30px;
+
+}
+
+
+
+.cloudFlow::after {
+  width: 100px;
+  height: 100px;
+
+  border-radius: 100%;
+  top: -50px;
+  left: 80px;
+
+}
+
+.x1 {
+	-webkit-animation: animateCloud 35s linear infinite;
+	-moz-animation: animateCloud 35s linear infinite;
+	animation: animateCloud 35s linear infinite;
+
+	-webkit-transform: scale(0.65);
+	-moz-transform: scale(0.65);
+	transform: scale(0.65);
+}
+
+.x2 {
+	-webkit-animation: animateCloud 20s linear infinite;
+	-moz-animation: animateCloud 20s linear infinite;
+	animation: animateCloud 20s linear infinite;
+
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+	transform: scale(0.3);
+}
+
+.x3 {
+	-webkit-animation: animateCloud 30s linear infinite;
+	-moz-animation: animateCloud 30s linear infinite;
+	animation: animateCloud 30s linear infinite;
+  animation-timing-function: ease-in-out;
+
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	transform: scale(0.5);
+}
+
+
+
+
+@keyframes animateCloud
+{
+    0% {margin-left: -1000px}
+
+    80% {opacity: .5;}
+
+    100%  {
+      margin-left: 100%;
+      opacity: .1;
+    }
+}
