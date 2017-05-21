@@ -23,7 +23,7 @@ function weatherResults (data) {
   var temp = data.current_observation.temp_c;
   var weather = data.current_observation.weather;
   var rainKm = data.current_observation.wind_gust_kph;
-  clouds.style.display = 'none';
+
 
 
   output = document.querySelector("#output");
@@ -42,6 +42,7 @@ function weatherResults (data) {
   } else if (weather.indexOf("Clear") >= 0) {
       body.setAttribute("class", "clear");
       weatherIco.setAttribute("class", "sun");
+      clouds.style.display = 'none';
   }
 }
 
