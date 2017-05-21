@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var body = document.querySelector("body");
     var weatherIco = document.querySelector("#weatherIco");
-    var clouds = document.querySelector("#clouds");
+    var clouds = document.querySelector(".clouds");
     var input = document.querySelector("#input");
     //var inputValue = input.value;
     var searchButton = document.getElementById('searchButton');
