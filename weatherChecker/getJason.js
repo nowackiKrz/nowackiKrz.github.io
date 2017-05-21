@@ -34,7 +34,7 @@ function weatherResults (data) {
   } else if (weather.includes("Clou") == true || weather.includes("Overcast") == true  ) { //zamiast indexOf porownuje za pmoca includes bo w tym json odmieniają slowo cloud
       body.setAttribute("class", "rain");
       weatherIco.setAttribute("class", "cloud");
-      clouds.setAttribute("class", "clouds");
+      clouds.style.display = 'block';
       //weatherIco.classList.add("drop");
       //weatherIco.className += " drop";
 
