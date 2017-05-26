@@ -202,6 +202,4 @@ function weatherResults (data) {
     });
 
     */
-      });
-    });
-    */
+  
