@@ -14,8 +14,37 @@ document.addEventListener("DOMContentLoaded", function() {
     var li = document.createElement("li");
     var buttonResults = document.createElement("button");
     var l = "";
+    var currentOpacity = 1;
+    var sumOfCloudsOpacity = 0;
 
     console.log(searchButton);
+
+
+    for (var i = 0; i < cloudFlow.length; i++) {
+
+          cloudFlow[i].addEventListener("click", function(event) {
+          var currentOpacity = this.style.opacity;
+          currentOpacity -= 0.4;
+          this.style.opacity = currentOpacity.toString();
+          cloudOpacityCounter ();
+        });
+
+    }
+
+
+
+
+
+function cloudOpacityCounter () {
+  for (var i = 0; i < cloudFlow.length; i++) {
+      sumOfCloudsOpacity = Number(cloudFlow[i].style.opacity);
+
+    }
+    console.log(sumOfCloudsOpacity );
+    if (sumOfCloudsOpacity <= 0) {
+      alert("Zniszczyles chmury!!!");
+    }
+}
 
 
 function weatherResults (data) {
@@ -28,6 +57,10 @@ function weatherResults (data) {
 
   output = document.querySelector("#output");
   output.innerHTML = "Temperature: " + temp + " &#176; C <br>" + weather;
+
+  for (var i = 0; i < cloudFlow.length; i++) {
+      cloudFlow[i].style.opacity = 1;
+    }
 
   if (weather.indexOf("Rain") >= 0) {
       body.setAttribute("class", "rain");
