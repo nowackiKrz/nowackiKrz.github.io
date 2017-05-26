@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var body = document.querySelector("body");
     var weatherIco = document.querySelector("#weatherIco");
     var clouds = document.querySelector(".clouds");
-    var cloudFlow = document.querySelectorAll(".cloudFlow");
-
     var input = document.querySelector("#input");
     //var inputValue = input.value;
     var searchButton = document.getElementById('searchButton');
@@ -16,58 +14,20 @@ document.addEventListener("DOMContentLoaded", function() {
     var li = document.createElement("li");
     var buttonResults = document.createElement("button");
     var l = "";
-    var currentOpacity = 1;
-    var sumOfCloudsOpacity = 0;
 
     console.log(searchButton);
 
-  /* for (var i = 0; i < cloudFlow.length; i++) {
-      cloudFlow[i].style.opacity = 1;
-    }
-*/
-
-    for (var i = 0; i < cloudFlow.length; i++) {
-
-          cloudFlow[i].addEventListener("click", function(event) {
-          var currentOpacity = this.style.opacity;
-          currentOpacity -= 0.4;
-          this.style.opacity = currentOpacity.toString();
-          cloudOpacityCounter ();
-        });
-
-    }
-
-
-
-
-
-function cloudOpacityCounter () {
-  for (var i = 0; i < cloudFlow.length; i++) {
-      sumOfCloudsOpacity = Number(cloudFlow[i].style.opacity);
-
-    }
-    console.log(sumOfCloudsOpacity );
-    if (sumOfCloudsOpacity <= 0) {
-      alert("Zniszczyles chmury!!!");
-    }
-}
-
-
 
 function weatherResults (data) {
-
 
   var temp = data.current_observation.temp_c;
   var weather = data.current_observation.weather;
   var rainKm = data.current_observation.wind_gust_kph;
 
 
+
   output = document.querySelector("#output");
   output.innerHTML = "Temperature: " + temp + " &#176; C <br>" + weather;
-
-  for (var i = 0; i < cloudFlow.length; i++) {
-      cloudFlow[i].style.opacity = 1;
-    }
 
   if (weather.indexOf("Rain") >= 0) {
       body.setAttribute("class", "rain");
@@ -82,7 +42,8 @@ function weatherResults (data) {
   } else if (weather.indexOf("Clear") >= 0) {
       body.setAttribute("class", "clear");
       weatherIco.setAttribute("class", "sun");
-      clouds.style.display = "none";
+      clouds.style.display = 'none';
+
   }
 }
 
@@ -104,17 +65,14 @@ function weatherResults (data) {
 
         /*
                 function getJson() {
-
                     $.getJSON("http://api.wunderground.com/api/55b1f2cf5780cb8a/conditions/q//" + inputValue + ".json", function(data) {
-
                         console.log(data);
-
                     });
                 };
         */
-      var  $j = jQuery.noConflict();
+      //var  $j = jQuery.noConflict();
 
-        $j.getJSON("http://api.wunderground.com/api/55b1f2cf5780cb8a/conditions/q//" + inputValue + ".json", function(data) {
+        $.getJSON("https://api.wunderground.com/api/55b1f2cf5780cb8a/conditions/q//" + inputValue + ".json", function(data) {
 
             //console.log(data);
 
@@ -162,7 +120,7 @@ function weatherResults (data) {
                         //console.log(this.previousElementSibling.dataset.manyResultLink);
 
 
-                        $j.getJSON("http://api.wunderground.com/api/55b1f2cf5780cb8a/conditions/" + this.previousElementSibling.dataset.manyResultLink, function(data) {
+                        $.getJSON("https://api.wunderground.com/api/55b1f2cf5780cb8a/conditions/" + this.previousElementSibling.dataset.manyResultLink, function(data) {
 
                           weatherResults (data);
 
@@ -175,9 +133,8 @@ function weatherResults (data) {
         });
 
     });
-      });
 
-
+});
 
 
 
@@ -186,9 +143,7 @@ function weatherResults (data) {
 
 
     /*
-
     //<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-
     jQuery(document).ready(function($) {
       $.ajax({
       url : "http://api.wunderground.com/api/55b1f2cf5780cb8a/geolookup/conditions/q/IA/Cedar_Rapids.json",
@@ -200,5 +155,4 @@ function weatherResults (data) {
       }
       });
     });
-
     */
