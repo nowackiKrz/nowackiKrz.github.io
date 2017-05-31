@@ -27,9 +27,9 @@ document.addEventListener("DOMContentLoaded", function() {
           cloudFlow[i].addEventListener("click", function(event) {
           currentOpacity = this.style.opacity;
           currentOpacity -= 0.4;
-          if (currentOpacity < 0) {
+          /*if (currentOpacity < 0) {
               currentOpacity = 0;
-          }
+          } */
           this.style.opacity = currentOpacity.toString();
           cloudOpacityCounter ();
         });
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         }
         console.log(sumOfCloudsOpacity );
-        if (sumOfCloudsOpacity === 0) {
+        if (sumOfCloudsOpacity <= 0) {
           alert("Zniszczyles chmury!!!");
         }
     }
