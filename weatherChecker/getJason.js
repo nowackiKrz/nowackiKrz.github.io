@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
           currentOpacity -= 0.4;
           if (currentOpacity < 0) {
               currentOpacity = 0;
-          } 
+          }
           this.style.opacity = currentOpacity.toString();
           cloudOpacityCounter ();
         });
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function cloudOpacityCounter () {
       sumOfCloudsOpacity = 0;
       for (var i = 0; i < cloudFlow.length; i++) {
-          sumOfCloudsOpacity = Number(cloudFlow[i].style.opacity);
+          sumOfCloudsOpacity += Number(cloudFlow[i].style.opacity);
 
         }
         console.log(sumOfCloudsOpacity );
