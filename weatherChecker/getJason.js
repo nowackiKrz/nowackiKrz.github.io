@@ -38,18 +38,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+    function cloudOpacityCounter () {
+      for (var i = 0; i < cloudFlow.length; i++) {
+          sumOfCloudsOpacity = Number(cloudFlow[i].style.opacity);
 
-
-function cloudOpacityCounter () {
-  for (var i = 0; i < cloudFlow.length; i++) {
-      sumOfCloudsOpacity = Number(cloudFlow[i].style.opacity);
-
+        }
+        console.log(sumOfCloudsOpacity );
+        if (sumOfCloudsOpacity === 0) {
+          alert("Zniszczyles chmury!!!");
+        }
     }
-    console.log(sumOfCloudsOpacity );
-    if (sumOfCloudsOpacity === 0) {
-      alert("Zniszczyles chmury!!!");
-    }
-}
+
 
 
 function weatherResults (data) {
