@@ -151,6 +151,78 @@ input {
 }
 
 
+.rainDrop {
+  width: 1px;
+  height: 5px;
+  background-color: darkblue;
+  border-radius: 50%;
+  float:left;
+  position: relative;
+  -webkit-animation: rainFalls .5s linear infinite;
+  -moz-animation: rainFalls .5s linear infinite;
+  animation: rainFalls .5s linear infinite;
+}
+
+.rainDrop2 {
+  width: 1px;
+  height: 5px;
+  background-color: darkblue;
+  border-radius: 50%;
+  float:left;
+  position: relative;
+  -webkit-animation: rainFalls 3s linear infinite;
+  -moz-animation: rainFalls 3s linear infinite;
+  animation: rainFalls 3s linear infinite;
+  animation-delay:1s;
+}
+
+.rainDrop:after{
+	content: '';
+	position: absolute;
+}
+
+
+.rainDrop::after {
+  width:1.4px;
+  height: 3px;
+  background-color: darkblue;
+  border-radius: 100%;
+  float:left;
+  top:5px;
+
+}
+
+
+.rainDropSlow {
+  width: 1px;
+  height: 5px;
+  background-color: darkblue;
+  border-radius: 50%;
+  float:left;
+  position: relative;
+  -webkit-animation: rainFalls 1s linear infinite;
+  -moz-animation: rainFalls 1s linear infinite;
+  animation: rainFalls 1s linear infinite;
+}
+
+.rainDropSlow:after{
+	content: '';
+	position: absolute;
+}
+
+
+.rainDropSlow::after {
+  width:1.4px;
+  height: 3px;
+  background-color: darkblue;
+  border-radius: 100%;
+  float:left;
+  top:5px;
+
+}
+
+
+
 /* Animations */
 
 @keyframes cloud {
@@ -161,6 +233,29 @@ input {
     transform: scale(0.5) translate(-200%, -3em);
   }
 }
+
+
+@keyframes rainFalls
+  {
+      0% {margin-top: 0px}
+
+      80%  {
+        margin-top: 80vh;
+        width: .4px;
+        height: 10px;
+
+      }
+
+      100%  {
+        margin-top: 100vh;
+        width: .4px;
+        height: 10px;
+
+      }
+  }
+
+
+
 
 /*
 .cloud::before {

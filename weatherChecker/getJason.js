@@ -70,6 +70,40 @@ function weatherResults (data) {
   if (weather.indexOf("Rain") >= 0) {
       body.setAttribute("class", "rain");
       weatherIco.setAttribute("class", "cloud");
+
+      for (var i = 0; i < 20; i++) {
+        mariginLeft +=5;
+        console.log(mariginLeft);
+
+        var rainSmake = document.createElement("div");
+        body.appendChild(rainSmake);
+        rainSmake.setAttribute("class", "rains");
+        var rainPosition = document.createElement("div");
+        rainSmake.appendChild(rainPosition);
+        rainPosition.setAttribute("class", "rainPosition");
+
+
+
+        var rainDrop= document.createElement("div");
+        rainSmake.appendChild(rainDrop);
+        rainDrop.setAttribute("class", "rainDrop");
+        rainDrop.style.marginLeft = String(mariginLeft)+"px";
+        rainDrop.style.animationDelay = "-"+String(i)+"s";
+
+        var rainDropSlow = document.createElement("div");
+        rainSmake.appendChild(rainDropSlow);
+        rainDropSlow.setAttribute("class", "rainDropSlow");
+        rainDropSlow.style.marginLeft = String(mariginLeft)+"px";
+      }
+
+
+
+
+
+
+
+
+
   } else if (weather.includes("Clou") == true || weather.includes("Overcast") == true  ) { //zamiast indexOf porownuje za pmoca includes bo w tym json odmieniają slowo cloud
       body.setAttribute("class", "rain");
       weatherIco.setAttribute("class", "cloud");
