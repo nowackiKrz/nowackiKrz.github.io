@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
     var weatherIco = document.querySelector("#weatherIco");
     var clouds = document.querySelector(".clouds");
     var cloudFlow = document.querySelectorAll(".cloudFlow");
+    var rainS = document.querySelector(".rains");
+    var mariginLeft = 0;
+    console.log(rainS);
 
     var input = document.querySelector("#input");
     //var inputValue = input.value;
