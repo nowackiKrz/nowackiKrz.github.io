@@ -13,7 +13,7 @@ body {
     font-variant: normal;
     font-weight: 500;
     height: 600px;
-    background: rgba(32, 214, 173, 0.9);
+    /*background: rgba(32, 214, 173, 0.9); */
     position: relative;
     overflow: hidden;
 }

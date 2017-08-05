@@ -1,6 +1,20 @@
 /*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5jc3MiLCJzb3VyY2VzIjpbIm1haW4uc2NzcyJdLCJzb3VyY2VzQ29udGVudCI6WyJcbiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIn0= */
 
+@import url('https://fonts.googleapis.com/css?family=Arvo|Kaushan+Script|Pacifico|Zilla+Slab+Highlight');
+
+
 @import url('animations.css');
+
+* {
+margin: 0;
+padding: 0;
+border: 0;
+line-height: 1.4em;
+vertical-align: baseline;
+text-decoration: none;
+outline: 0;
+}
+
 
 
 .invisible {
@@ -19,6 +33,14 @@ body {
     overflow: hidden;
 }
 
+.searchMenu {
+ font-size: 60px;
+ font-family: 'Pacifico', cursive;
+
+}
+
+
+
 .mainCointener {
   position: absolute;
   left: 50%;
@@ -29,7 +51,9 @@ body {
 button {
     color: #004d99;
     background: rgba(0, 0, 0, 0);
-    border: solid 5px #6496c8;
+    padding: 1px;
+    border: solid 6px #6496c8;
+    font-size: 23px;
 
 }
 
@@ -44,17 +68,19 @@ button.buttonResults {
     color: #004d99;
     background: rgba(0, 0, 0, 0);
     border: solid 1px #6496c8;
+    font-size: 14px;
+    padding: 0px;
 }
 
 
 input {
     margin-top: 30px;
     margin-left: -12px;
-    height: 20px;
-    width: 250px;
-    line-height: 40px;
-    font-size: 16px;
+    height: 40px;
+    width: 280px;
+    font-size: 30px;
     background-color: pink;
+    text-transform:  lowercase;
 }
 
 
