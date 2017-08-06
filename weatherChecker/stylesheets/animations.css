@@ -56,9 +56,9 @@
 	-moz-animation: animateCloud 35s linear infinite;
 	animation: animateCloud 35s linear infinite;
 
-	-webkit-transform: scale(0.4);
-	-moz-transform: scale(0.4);
-	transform: scale(0.4);
+	-webkit-transform: scale(0.65);
+	-moz-transform: scale(0.65);
+	transform: scale(0.65);
 }
 
 .x2 {
@@ -77,36 +77,10 @@
 	animation: animateCloud 30s linear infinite;
   animation-timing-function: ease-in-out;
 
-	-webkit-transform: scale(0.6);
-	-moz-transform: scale(0.6);
-	transform: scale(0.6);
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	transform: scale(0.5);
 }
-
-
-
-.x4 {
-	-webkit-animation: animateCloud 50s infinite;
-	-moz-animation: animateCloud 50s  infinite;
-	animation: animateCloud 50s  infinite;
-  animation-timing-function: ease-in-out;
-
-	-webkit-transform: scale(0.8);
-	-moz-transform: scale(0.8);
-	transform: scale(0.8);
-}
-
-
-.x5 {
-	-webkit-animation: animateCloud 50s infinite;
-	-moz-animation: animateCloud 50s  infinite;
-	animation: animateCloud 50s  infinite;
-  animation-timing-function: ease-in-out;
-
-	-webkit-transform: scale(1.2);
-	-moz-transform: scale(1.2);
-	transform: scale(1.2);
-}
-
 
 
 
