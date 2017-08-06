@@ -16,10 +16,10 @@ outline: 0;
 }
 
 
-
 .invisible {
   display: none;
 }
+
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -28,17 +28,36 @@ body {
     font-variant: normal;
     font-weight: 500;
     height: 600px;
-    background: rgba(32, 214, 173, 0.9);
+    /*background: rgba(32, 214, 173, 0.9); */
     position: relative;
     overflow: hidden;
 }
 
 .searchMenu {
+animation: 14s linear menuDisplay;
  font-size: 60px;
+
  font-family: 'Pacifico', cursive;
 
 }
 
+@media (max-width: 800px) {
+  .searchMenu {
+     font-size: 24px;} }
+
+
+
+@keyframes menuDisplay {
+  0% {
+    opacity: 0; }
+
+
+    80% {
+      opacity: 0;  }
+
+  100% {
+    opacity: 1}
+}
 
 
 .mainCointener {
@@ -48,14 +67,24 @@ body {
   transform: translate(-50%);
 }
 
+
+
+
 button {
     color: #004d99;
     background: rgba(0, 0, 0, 0);
-    padding: 1px;
-    border: solid 6px #6496c8;
-    font-size: 23px;
+    padding: .5px;
+    border: solid 5px #6496c8;
+    font-size: 22px;
 
 }
+
+@media (max-width: 800px) {
+  button {
+    padding: .2px;
+     font-size: 14px;} }
+
+
 
 button:hover {
   color: #004d99;
@@ -79,25 +108,222 @@ input {
     height: 40px;
     width: 280px;
     font-size: 30px;
+    color:#5f6062;
     background-color: pink;
     text-transform:  lowercase;
 }
 
+@media (max-width: 800px) {
+  input {
+    height: 25px;
+    width: 120px;
+     font-size: 14px;} }
+
+
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-
   background-color: pink;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+
+.bckGradien {
+
+height: 100vh;
+width: 100vw;
+background-color: rgba(32, 214, 173, 1);
+position:relative;
+overflow-y: scroll;
+
+
+/* background: linear-gradient(to bottom, grey 0%, white 100%);  */
 
 }
 
 
 
+.rainbows {
+    animation: 20s linear hideRainbow ;
+    animation: hideRainbow 11s ease-in-out 3s forwards;
+}
+
+@keyframes hideRainbow {
+  0% {
+    height: 0px;
+  }
+
+  50% {
+    opacity:1
+  }
+
+  75% {
+    opacity:1
+  }
+
+  100% {
+    opacity:0;
+  }
+
+}
+
+
+.rainbowRed {
+  width: 1400px;
+  height: 1400px;
+  background-color: red;
+  border-radius: 100%;
+  margin: 0 auto;
+  position: relative;
+  top:200px;
+
+}
+
+.rainbowOrange {
+  width: 1300px;
+  height: 1300px;
+  background-color: orange;
+  border-radius: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top:5%;
+  left: 4%;
+}
+
+.rainbowYellow {
+  width: 1200px;
+  height: 1200px;
+  background-color: yellow;
+  border-radius: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top:5%;
+  left: 4%;
+}
+
+.rainbowGreen {
+  width: 1100px;
+  height: 1100px;
+  background-color: green;
+  border-radius: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top:5%;
+  left: 4%;
+}
+
+.rainbowBlue {
+  width: 1000px;
+  height: 1000px;
+  background-color: blue;
+  border-radius: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top:5%;
+  left: 5%;
+}
+
+
+.rainbowViolet {
+  width: 900px;
+  height: 900px;
+  background-color: purple;
+  border-radius: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top:5%;
+  left: 6%;
+}
+
+.rainbowSmallest {
+  width: 800px;
+  height: 800px;
+  background-color: rgba(32, 214, 173, 1);
+  border-radius: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top:5%;
+  left: 6%;
+}
+
+
+.top,
+.bottom {
+  height: 900px;
+  width: 1800px;
+}
+
+
+
+.top {
+  background: #9e978e;
+  margin: 0 1em 1em 0;
+  border-top-left-radius: 1800px;
+  border-top-right-radius: 1800px;
+}
+
+
+
+.rotate {
+  animation: 12s linear rotate;
+  animation-delay: 1s;
+  background-color: rgba(32, 214, 173, 1);
+  position: absolute;
+  bottom: 430px;
+  transform: translate();
+  left: -50%;
+  transform-origin: 50% 100%;
+  box-shadow: 10px 10px 16px rgba(32, 214, 173, 1);;
+
+}
+
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+
+
+  }
+  50% {
+    transform: rotate(180deg);
+
+  }
+
+  75% {
+    transform: rotate(180deg);
+
+
+  }
+
+
+
+  }
+
+  100% {
+    transform: rotate(180deg);
+
+
+  }
+
+}
+
+
+
+
+
+
 .rain {
+    height: 100vh;
+
     background-color: grey;
-    background-color: #a6a6a6;
 
 
-    /* background: linear-gradient(to bottom, grey 0%, black 100%); */
+
+  /*  background: linear-gradient(to bottom, grey 0%, black 100%); */
 }
 
 
@@ -108,9 +334,17 @@ input {
 }
 
 .searchResults {
-    margin-left: 40px;
+
+
     font-size: 24px;
 }
+
+.searchResultsList {
+    font-size: 16px;
+    margin-left: 40px;
+}
+
+
 
 
 #weatherIco {
@@ -139,16 +373,7 @@ input {
 }
 
 
-/*
-.cloud {
-    margin-top: 20px;
-    margin-left: 20px;
-    width: 100px;
-    height: 70px;
-    background-color: lightgrey;
-    border-radius: 100%;
-    position: relative;
-  */
+
 
   .cloud {
     position: relative;
@@ -164,6 +389,7 @@ input {
       0 0 0 0.375em #fff,
       -2.1875em 0.6875em 0 -0.3125em #fff,
       2.0625em 0.9375em 0 -0.5625em #fff;
+
   }
 
 .cloud::after {
@@ -176,126 +402,7 @@ input {
   height: 1em;
   background: currentColor;
   box-shadow: 0 0.4375em 0 -0.0625em #fff;
-}
 
-
-/* Animations */
-
-@keyframes cloud {
-  0% { opacity: 0; }
-  50% { opacity: 0.3; }
-  100% {
-    opacity: 0;
-    transform: scale(0.5) translate(-200%, -3em);
-  }
-}
-
-/*
-.cloud::before {
-    content: '';
-    width: 100px;
-    height: 70px;
-    border-radius: 100%;
-    position: absolute;
-    display: inline-block;
-    background-color: lightgrey;
-    margin-left: -20px;
-    margin-top: 20px;
-}
-
-.cloud::after {
-    content: '';
-    width: 100px;
-    height: 70px;
-    border-radius: 100%;
-    position: absolute;
-    display: inline-block;
-    background-color: lightgrey;
-    margin-left: 30px;
-    margin-top: 20px;
-}
-
-*/
-
-.clouds {
-  display: none;
-  opacity: 0.8;
-}
-
-
-.cloudFlow {
-  width: 200px;
-  height: 80px;
-  background-color: lightblue;
-  background: #f2f9fe;
-
-	background: linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
-	background: -webkit-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
-	background: -moz-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
-	background: -ms-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
-	background: -o-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
-  border-radius: 100px;
-  position: relative;
-
-
-}
-
-.cloudFlow:after, .cloudFlow:before {
-	content: '';
-	position: absolute;
-	background: #f2f9fe;
-	z-index: -1
-}
-
-.cloudFlow::before {
-  width: 80px;
-  height: 80px;
-
-  border-radius: 100%;
-  top: -30px;
-  left: 30px;
-
-}
-
-
-
-.cloudFlow::after {
-  width: 100px;
-  height: 100px;
-
-  border-radius: 100%;
-  top: -50px;
-  left: 80px;
-
-}
-
-.x1 {
-
-
-	-webkit-transform: scale(0.65);
-	-moz-transform: scale(0.65);
-	transform: scale(0.65);
-}
-
-.x2 {
-	-webkit-animation: animateCloud 20s linear infinite;
-	-moz-animation: animateCloud 20s linear infinite;
-	animation: animateCloud 20s linear infinite;
-
-	-webkit-transform: scale(0.3);
-	-moz-transform: scale(0.3);
-	transform: scale(0.3);
-}
-
-.x3 {
-	-webkit-animation: animateCloud 30s linear infinite;
-	-moz-animation: animateCloud 30s linear infinite;
-	animation: animateCloud 30s linear infinite;
-  animation-timing-function: ease-in-out;
-
-	-webkit-transform: scale(0.5);
-	-moz-transform: scale(0.5);
-	transform: scale(0.5);
 }
 
 
@@ -370,23 +477,17 @@ input {
 }
 
 
-
 /* Animations */
 
-
-
-
-@keyframes animateCloud
-{
-    0% {margin-left: -1000px}
-
-    80% {opacity: .5;}
-
-    100%  {
-      margin-left: 100%;
-      opacity: .1;
-    }
+@keyframes cloud {
+  0% { opacity: 0; }
+  50% { opacity: 0.3; }
+  100% {
+    opacity: 0;
+    transform: scale(0.5) translate(-200%, -3em);
+  }
 }
+
 
 
 @keyframes rainFalls
@@ -407,3 +508,31 @@ input {
 
       }
   }
+
+
+/*
+.cloud::before {
+    content: '';
+    width: 100px;
+    height: 70px;
+    border-radius: 100%;
+    position: absolute;
+    display: inline-block;
+    background-color: lightgrey;
+    margin-left: -20px;
+    margin-top: 20px;
+}
+
+.cloud::after {
+    content: '';
+    width: 100px;
+    height: 70px;
+    border-radius: 100%;
+    position: absolute;
+    display: inline-block;
+    background-color: lightgrey;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+*/
