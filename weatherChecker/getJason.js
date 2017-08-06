@@ -3,8 +3,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     var body = document.querySelector("body");
+
     var weatherIco = document.querySelector("#weatherIco");
     var clouds = document.querySelector(".clouds");
+    var rainbows = document.querySelector(".rainbows");
     var cloudFlow = document.querySelectorAll(".cloudFlow");
     var rainS = document.querySelector(".rains");
     var mariginLeft = 0;
@@ -14,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //var inputValue = input.value;
     var searchButton = document.getElementById('searchButton');
     var searchResults = document.querySelector('.searchResults');
+    var searchResultsList = document.querySelector('.searchResultsList');
     var ul = document.querySelector("ul");
 
     var li = document.createElement("li");
@@ -28,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
     for (var i = 0; i < cloudFlow.length; i++) {
 
           cloudFlow[i].addEventListener("click", function(event) {
-          currentOpacity = this.style.opacity;
+          var currentOpacity = this.style.opacity;
           currentOpacity -= 0.4;
           if (currentOpacity < 0) {
               currentOpacity = 0;
@@ -41,26 +44,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-    function cloudOpacityCounter () {
-      sumOfCloudsOpacity = 0;
-      for (var i = 0; i < cloudFlow.length; i++) {
-          sumOfCloudsOpacity += Number(cloudFlow[i].style.opacity);
 
-        }
-        console.log(sumOfCloudsOpacity );
-        if (sumOfCloudsOpacity <= 0) {
-          alert("Zniszczyles chmury!!!");
-        }
+
+function cloudOpacityCounter () {
+  sumOfCloudsOpacity = 0;
+  for (var i = 0; i < cloudFlow.length; i++) {
+
+      sumOfCloudsOpacity += Number(cloudFlow[i].style.opacity);
+
     }
+    console.log("Suma opacity wynosi "+sumOfCloudsOpacity );
+    if (sumOfCloudsOpacity <= 0) {
+      alert("Zniszczyles chmury!!!");
+    }
+}
 
 
 
 function weatherResults (data) {
 
+
   var temp = data.current_observation.temp_c;
   var weather = data.current_observation.weather;
   var rainKm = data.current_observation.wind_gust_kph;
-
 
 
   output = document.querySelector("#output");
@@ -70,37 +76,39 @@ function weatherResults (data) {
       cloudFlow[i].style.opacity = 1;
     }
 
-    if (weather.indexOf("Rain") >= 0) {
-        body.setAttribute("class", "rain");
-        weatherIco.setAttribute("class", "cloud");
-        rainS.style.display = 'block';
+  if (weather.indexOf("Rain") >= 0) {
+      body.setAttribute("class", "rain");
+      clouds.style.display = 'none';
+      //weatherIco.setAttribute("class", "cloud");
+      rainS.style.display = 'block';
 
 
 
-        for (var i = 0; i < 20; i++) {
-          mariginLeft +=5;
-          console.log(mariginLeft);
+      for (var i = 0; i < 20; i++) {
+        mariginLeft +=5;
+        console.log(mariginLeft);
 
-          var rainSmake = document.createElement("div");
-          rainS.appendChild(rainSmake);
-          rainSmake.setAttribute("class", "rains");
-          var rainPosition = document.createElement("div");
-          rainSmake.appendChild(rainPosition);
-          rainPosition.setAttribute("class", "rainPosition");
+        var rainSmake = document.createElement("div");
+        rainS.appendChild(rainSmake);
+        rainSmake.setAttribute("class", "rains");
+        var rainPosition = document.createElement("div");
+        rainSmake.appendChild(rainPosition);
+        rainPosition.setAttribute("class", "rainPosition");
 
 
 
-          var rainDrop= document.createElement("div");
-          rainSmake.appendChild(rainDrop);
-          rainDrop.setAttribute("class", "rainDrop");
-          rainDrop.style.marginLeft = String(mariginLeft)+"px";
-          rainDrop.style.animationDelay = "-"+String(i)+"s";
+        var rainDrop= document.createElement("div");
+        rainSmake.appendChild(rainDrop);
+        rainDrop.setAttribute("class", "rainDrop");
+        rainDrop.style.marginLeft = String(mariginLeft)+"px";
+        rainDrop.style.animationDelay = "-"+String(i)+"s";
 
-          var rainDropSlow = document.createElement("div");
-          rainSmake.appendChild(rainDropSlow);
-          rainDropSlow.setAttribute("class", "rainDropSlow");
-          rainDropSlow.style.marginLeft = String(mariginLeft)+"px";
-        }
+        var rainDropSlow = document.createElement("div");
+        rainSmake.appendChild(rainDropSlow);
+        rainDropSlow.setAttribute("class", "rainDropSlow");
+        rainDropSlow.style.marginLeft = String(mariginLeft)+"px";
+      }
+
 
 
 
@@ -109,18 +117,18 @@ function weatherResults (data) {
 
   } else if (weather.includes("Clou") == true || weather.includes("Overcast") == true  ) { //zamiast indexOf porownuje za pmoca includes bo w tym json odmieniają slowo cloud
       body.setAttribute("class", "rain");
-      weatherIco.setAttribute("class", "cloud");
+      //weatherIco.setAttribute("class", "cloud");
       clouds.style.display = 'block';
       rainS.style.display = 'none';
       //weatherIco.classList.add("drop");
       //weatherIco.className += " drop";
 
   } else if (weather.indexOf("Clear") >= 0) {
+      //body.setAttribute("class", "clear");
       body.setAttribute("class", "clear");
       weatherIco.setAttribute("class", "sun");
-      clouds.style.display = 'none';
+      clouds.style.display = "none";
       rainS.style.display = 'none';
-
   }
 }
 
@@ -129,6 +137,7 @@ function weatherResults (data) {
 
 
     searchButton.addEventListener("click", function(event) {
+      rainbows.style.display = 'none';
 
         input = document.querySelector("#input");
         var inputValue = input.value;
@@ -142,14 +151,17 @@ function weatherResults (data) {
 
         /*
                 function getJson() {
+
                     $.getJSON("http://api.wunderground.com/api/55b1f2cf5780cb8a/conditions/q//" + inputValue + ".json", function(data) {
+
                         console.log(data);
+
                     });
                 };
         */
-      //var  $j = jQuery.noConflict();
+      var  $j = jQuery.noConflict();
 
-        $.getJSON("https://api.wunderground.com/api/55b1f2cf5780cb8a/conditions/q//" + inputValue + ".json", function(data) {
+        $j.getJSON("https://api.wunderground.com/api/55b1f2cf5780cb8a/conditions/q//" + inputValue + ".json", function(data) {
 
             //console.log(data);
 
@@ -168,7 +180,7 @@ function weatherResults (data) {
                 output = document.querySelector("#output");
                 output.innerText = "There are several cities with this name:";
                 var ul = document.createElement("ul");
-                searchResults.appendChild(ul);
+                searchResultsList.appendChild(ul);
 
 
 
@@ -197,7 +209,7 @@ function weatherResults (data) {
                         //console.log(this.previousElementSibling.dataset.manyResultLink);
 
 
-                        $.getJSON("https://api.wunderground.com/api/55b1f2cf5780cb8a/conditions/" + this.previousElementSibling.dataset.manyResultLink, function(data) {
+                        $j.getJSON("https://api.wunderground.com/api/55b1f2cf5780cb8a/conditions/" + this.previousElementSibling.dataset.manyResultLink, function(data) {
 
                           weatherResults (data);
 
@@ -210,8 +222,9 @@ function weatherResults (data) {
         });
 
     });
+      });
 
-});
+
 
 
 
@@ -220,7 +233,9 @@ function weatherResults (data) {
 
 
     /*
+
     //<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+
     jQuery(document).ready(function($) {
       $.ajax({
       url : "http://api.wunderground.com/api/55b1f2cf5780cb8a/geolookup/conditions/q/IA/Cedar_Rapids.json",
@@ -232,4 +247,5 @@ function weatherResults (data) {
       }
       });
     });
+
     */
