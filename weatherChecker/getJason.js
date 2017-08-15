@@ -32,7 +32,10 @@ document.addEventListener("DOMContentLoaded", function() {
     let sumOfCloudsOpacity = 0;
     let clickCount = 0;
 
-    input.value = cookies[0].split("=")[1]  //wczytuje nazwe miasta z cookies 
+
+    let cookies = document.cookie.split("; ")
+    console.log(cookies);
+    input.value = cookies[0].split("=")[1]  //wczytuje nazwe miasta z cookies
 
 
 
@@ -239,10 +242,8 @@ document.addEventListener("DOMContentLoaded", function() {
         rainbows.remove();
 
         input = document.querySelector("#input");
-        console.log(input.value);
         setCookie("cityCookie", input.value, 7);
-        let cookies = document.cookie.split("; ")
-        console.log(cookies);
+
 
 
 
