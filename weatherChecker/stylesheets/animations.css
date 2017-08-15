@@ -51,24 +51,38 @@
 
 }
 
-.x1 {
-	-webkit-animation: animateCloud 35s linear infinite;
-	-moz-animation: animateCloud 35s linear infinite;
-	animation: animateCloud 35s linear infinite;
+.x1fast {
+	-webkit-animation: animateCloud 10s linear infinite;
+	-moz-animation: animateCloud 10s linear infinite;
+	animation: animateCloud 10s linear infinite;
 
-	-webkit-transform: scale(0.4);
-	-moz-transform: scale(0.4);
-	transform: scale(0.4);
+	-webkit-transform: scale(0.2);
+	-moz-transform: scale(0.2);
+	transform: scale(0.2);
 }
+
+
+
+.x1 {
+	-webkit-animation: animateCloud 15s linear infinite;
+	-moz-animation: animateCloud 15s linear infinite;
+	animation: animateCloud 15s linear infinite;
+
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+	transform: scale(0.3);
+}
+
+
 
 .x2 {
 	-webkit-animation: animateCloud 20s linear infinite;
 	-moz-animation: animateCloud 20s linear infinite;
 	animation: animateCloud 20s linear infinite;
 
-	-webkit-transform: scale(0.3);
-	-moz-transform: scale(0.3);
-	transform: scale(0.3);
+	-webkit-transform: scale(0.4);
+	-moz-transform: scale(0.4);
+	transform: scale(0.4);
 }
 
 .x3 {
@@ -85,9 +99,9 @@
 
 
 .x4 {
-	-webkit-animation: animateCloud 50s infinite;
-	-moz-animation: animateCloud 50s  infinite;
-	animation: animateCloud 50s  infinite;
+	-webkit-animation: animateCloud 40s infinite;
+	-moz-animation: animateCloud 40s  infinite;
+	animation: animateCloud 40s  infinite;
   animation-timing-function: ease-in-out;
 
 	-webkit-transform: scale(0.8);
@@ -97,9 +111,9 @@
 
 
 .x5 {
-	-webkit-animation: animateCloud 50s infinite;
-	-moz-animation: animateCloud 50s  infinite;
-	animation: animateCloud 50s  infinite;
+	-webkit-animation: animateCloud 40s infinite;
+	-moz-animation: animateCloud 40s  infinite;
+	animation: animateCloud 40s  infinite;
   animation-timing-function: ease-in-out;
 
 	-webkit-transform: scale(1.2);
@@ -108,12 +122,24 @@
 }
 
 
+.x6 {
+	-webkit-animation: animateCloud 40s infinite;
+	-moz-animation: animateCloud 40s  infinite;
+	animation: animateCloud 40s  infinite;
+  animation-timing-function: ease-in-out;
+
+	-webkit-transform: scale(1.4);
+	-moz-transform: scale(1.4);
+	transform: scale(1.4);
+}
+
+
 
 
 
 @keyframes animateCloud
 {
-    0% {margin-left: -1000px}
+    0% {margin-left: -800px}
 
     80% {opacity: .5;}
 

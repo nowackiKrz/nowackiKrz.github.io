@@ -43,7 +43,7 @@ animation: 14s linear menuDisplay;
 
 @media (max-width: 800px) {
   .searchMenu {
-     font-size: 24px;} }
+     font-size: 26px;} }
 
 
 
@@ -63,7 +63,7 @@ animation: 14s linear menuDisplay;
 .mainCointener {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 20%;
   transform: translate(-50%);
 }
 
@@ -103,8 +103,8 @@ button.buttonResults {
 
 
 input {
-    margin-top: 30px;
-    margin-left: -12px;
+    margin-top: 22px;
+    /* margin-left: -12px; */
     height: 40px;
     width: 280px;
     font-size: 30px;
@@ -130,6 +130,39 @@ ul {
   list-style-type: none;
 }
 
+.gamePopup {
+
+  height: auto;
+  width: 300px;
+  background: pink;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+
+}
+
+@media (max-width: 800px) {
+  .gamePopup {
+    height: auto;
+    width: 150px;
+    background: pink;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;} }
+
+.gameSpace {
+margin: 0 auto;
+margin-bottom: 20%;
+
+
+}
+
+.blockClickOpacity{
+  width: 100vh;
+  height: 100vw;
+  opacity: 1;
+}
+
 
 .bckGradien {
 
@@ -149,6 +182,7 @@ overflow-y: scroll;
 .rainbows {
     animation: 20s linear hideRainbow ;
     animation: hideRainbow 11s ease-in-out 3s forwards;
+
 }
 
 @keyframes hideRainbow {
