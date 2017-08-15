@@ -241,13 +241,15 @@ document.addEventListener("DOMContentLoaded", function() {
         input = document.querySelector("#input");
         console.log(input.value);
         setCookie("cityCookie", input.value, 7);
-        var cookies = document.cookie.split("; ")
+        let cookies = document.cookie.split("; ")
         console.log(cookies);
+
 
 
 
         input = document.querySelector("#input");
         let inputValue = input.value;
+        input.value = console.log(cookies[0].split("=")[1])
 
         ul = document.querySelector("ul");
         if (ul != null) {
