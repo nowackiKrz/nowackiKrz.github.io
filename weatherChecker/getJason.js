@@ -244,11 +244,6 @@ document.addEventListener("DOMContentLoaded", function() {
         let cookies = document.cookie.split("; ")
         console.log(cookies);
 
-
-
-
-        input = document.querySelector("#input");
-        let inputValue = input.value;
         input.value = console.log(cookies[0].split("=")[1])
 
         ul = document.querySelector("ul");
