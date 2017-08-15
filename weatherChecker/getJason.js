@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log(cookies);
     input.value = cookies[0].split("=")[1]  //wczytuje nazwe miasta z cookies
 
-*/
+
 
 
         function setCookie(name, val, days) {
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.cookie = name + "=" + val + expires + "; path=/";
     }
 
-
+*/
 
 
 
@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         let $j = jQuery.noConflict();
 
-        $j.getJSON("https://api.wunderground.com/api/55b1f2cf5780cb8a/conditions/q//&callback=?" + inputValue + ".json", function(data) {
+        $j.getJSON("https://api.wunderground.com/api/55b1f2cf5780cb8a/conditions/q//" + inputValue + ".json", function(data) {
 
             //console.log(data);
 
