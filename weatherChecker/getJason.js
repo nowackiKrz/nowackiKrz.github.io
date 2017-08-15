@@ -1,146 +1,249 @@
 document.addEventListener("DOMContentLoaded", function() {
     console.log("DOM fully loaded and parsed");
 
+    let body = document.querySelector("body");
 
-    var body = document.querySelector("body");
+    let weatherIco = document.querySelector("#weatherIco");
+    let clouds = document.querySelector(".clouds");
+    let gamePopup = document.createElement("div");
+    let gamePopupTimer = document.createElement("div");
+    let gameSpace = document.querySelector(".gameSpace");
 
-    var weatherIco = document.querySelector("#weatherIco");
-    var clouds = document.querySelector(".clouds");
-    var rainbows = document.querySelector(".rainbows");
-    var cloudFlow = document.querySelectorAll(".cloudFlow");
-    var rainS = document.querySelector(".rains");
-    var mariginLeft = 0;
+    let rainbows = document.querySelector(".rainbows");
+    let cloudFlow = document.querySelectorAll(".cloudFlow");
+    let rainS = document.querySelector(".rains");
+    let mariginLeft = 0;
     console.log(rainS);
 
-    var input = document.querySelector("#input");
-    //var inputValue = input.value;
-    var searchButton = document.getElementById('searchButton');
-    var searchResults = document.querySelector('.searchResults');
-    var searchResultsList = document.querySelector('.searchResultsList');
-    var ul = document.querySelector("ul");
+    let input = document.querySelector("#input");
+    let inputValue = input.value;
+    let bckGradien = document.querySelector('.bckGradien');
+    let searchButton = document.getElementById('searchButton');
+    let searchMenu = document.querySelector('.searchMenu');
+    let searchResults = document.querySelector('.searchResults');
 
-    var li = document.createElement("li");
-    var buttonResults = document.createElement("button");
-    var l = "";
-    var currentOpacity = 1;
-    var sumOfCloudsOpacity = 0;
+    let searchResultsList = document.querySelector('.searchResultsList');
+    let ul = document.querySelector("ul");
 
-    console.log(searchButton);
+    let li = document.createElement("li");
+    let buttonResults = document.createElement("button");
+    let l = "";
+    let currentOpacity = 1;
+    let sumOfCloudsOpacity = 0;
+    var clickCount = 0;
 
 
-    for (var i = 0; i < cloudFlow.length; i++) {
 
-          cloudFlow[i].addEventListener("click", function(event) {
-          var currentOpacity = this.style.opacity;
-          currentOpacity -= 0.4;
-          if (currentOpacity < 0) {
-              currentOpacity = 0;
-          }
-          this.style.opacity = currentOpacity.toString();
-          cloudOpacityCounter ();
-        });
 
+
+        function setCookie(name, val, days) {
+        if (days) {
+            var data = new Date();
+            data.setTime(data.getTime() + (days * 24*60*60*1000));
+            var expires = "; expires="+data.toGMTString();
+        } else {
+            var expires = "";
+        }
+        document.cookie = name + "=" + val + expires + "; path=/";
     }
 
 
 
 
 
-function cloudOpacityCounter () {
-  sumOfCloudsOpacity = 0;
-  for (var i = 0; i < cloudFlow.length; i++) {
 
-      sumOfCloudsOpacity += Number(cloudFlow[i].style.opacity);
+    function clickClouds() {
 
-    }
-    console.log("Suma opacity wynosi "+sumOfCloudsOpacity );
-    if (sumOfCloudsOpacity <= 0) {
-      alert("Zniszczyles chmury!!!");
-    }
-}
+        for (let i = 0; i < cloudFlow.length; i++) {
 
+            cloudFlow[i].addEventListener("click", function(event) {
 
+                let currentOpacity = this.style.opacity;
+                currentOpacity -= 0.4;
+                clickCount += 1;
+                if (currentOpacity < 0) {
+                    currentOpacity = 0;
 
-function weatherResults (data) {
+                    //this.remove();   - jak usuwam to musze je jeszce dodać w js bo sa obecnei tylko w html. najlepiej je tworzyc gdy sa chmury
+                }
+                this.style.opacity = currentOpacity.toString();
+                cloudOpacityCounter();
+                countDisplay(clickCount);
 
+            });
 
-  var temp = data.current_observation.temp_c;
-  var weather = data.current_observation.weather;
-  var rainKm = data.current_observation.wind_gust_kph;
-
-
-  output = document.querySelector("#output");
-  output.innerHTML = "Temperature: " + temp + " &#176; C <br>" + weather;
-
-  for (var i = 0; i < cloudFlow.length; i++) {
-      cloudFlow[i].style.opacity = 1;
+        }
     }
 
-  if (weather.indexOf("Rain") >= 0) {
-      body.setAttribute("class", "rain");
-      clouds.style.display = 'none';
-      //weatherIco.setAttribute("class", "cloud");
-      rainS.style.display = 'block';
+    function countDisplay(count) {
+        gamePopup.innerHTML = "Score: " + count;
 
+    }
 
+    function cloudOpacityCounter() {
+        sumOfCloudsOpacity = 0;
+        for (let i = 0; i < cloudFlow.length; i++) {
 
-      for (var i = 0; i < 20; i++) {
-        mariginLeft +=5;
-        console.log(mariginLeft);
+            sumOfCloudsOpacity += Number(cloudFlow[i].style.opacity);
 
-        var rainSmake = document.createElement("div");
-        rainS.appendChild(rainSmake);
-        rainSmake.setAttribute("class", "rains");
-        var rainPosition = document.createElement("div");
-        rainSmake.appendChild(rainPosition);
-        rainPosition.setAttribute("class", "rainPosition");
+        }
+        console.log("Suma opacity wynosi " + sumOfCloudsOpacity);
+        if (sumOfCloudsOpacity <= 0) {
+            alert("Zniszczyles chmury!!!");
+        }
+    }
 
-
-
-        var rainDrop= document.createElement("div");
-        rainSmake.appendChild(rainDrop);
-        rainDrop.setAttribute("class", "rainDrop");
-        rainDrop.style.marginLeft = String(mariginLeft)+"px";
-        rainDrop.style.animationDelay = "-"+String(i)+"s";
-
-        var rainDropSlow = document.createElement("div");
-        rainSmake.appendChild(rainDropSlow);
-        rainDropSlow.setAttribute("class", "rainDropSlow");
-        rainDropSlow.style.marginLeft = String(mariginLeft)+"px";
-      }
+    function weatherResults(data) {
 
 
 
 
 
 
+        let temp = data.current_observation.temp_c;
+        let weather = data.current_observation.weather;
+        let rainKm = data.current_observation.wind_gust_kph;
+        let predictionUrl = data.current_observation.forecast_url;
+        let predictionLink  = document.createElement('a');
 
-  } else if (weather.includes("Clou") == true || weather.includes("Overcast") == true  ) { //zamiast indexOf porownuje za pmoca includes bo w tym json odmieniają slowo cloud
-      body.setAttribute("class", "rain");
-      //weatherIco.setAttribute("class", "cloud");
-      clouds.style.display = 'block';
-      rainS.style.display = 'none';
-      //weatherIco.classList.add("drop");
-      //weatherIco.className += " drop";
 
-  } else if (weather.indexOf("Clear") >= 0) {
-      //body.setAttribute("class", "clear");
-      body.setAttribute("class", "clear");
-      weatherIco.setAttribute("class", "sun");
-      clouds.style.display = "none";
-      rainS.style.display = 'none';
-  }
-}
+        output = document.querySelector("#output");
 
 
 
+        output.innerHTML = "Temperature: " + temp + " &#176; C <br>" + weather+"<br>" ;
+        output.appendChild(predictionLink);
 
+        predictionLink.setAttribute('href',data.current_observation.forecast_url);
+          predictionLink.setAttribute('target', '_blank');
+        predictionLink.innerHTML = "Check prediction";
+        console.log(predictionUrl);
+
+
+        for (let i = 0; i < cloudFlow.length; i++) {
+            cloudFlow[i].style.opacity = 1;
+        }
+
+        if (weather.indexOf("Rain") >= 0) {
+            body.setAttribute("class", "rain");
+            clouds.style.display = 'none';
+            //weatherIco.setAttribute("class", "cloud");
+            rainS.style.display = 'block';
+
+            for (let i = 0; i < 20; i++) {
+                mariginLeft += 5;
+                console.log(mariginLeft);
+
+                let rainSmake = document.createElement("div");
+                rainS.appendChild(rainSmake);
+                rainSmake.setAttribute("class", "rains");
+                let rainPosition = document.createElement("div");
+                rainSmake.appendChild(rainPosition);
+                rainPosition.setAttribute("class", "rainPosition");
+
+                let rainDrop = document.createElement("div");
+                rainSmake.appendChild(rainDrop);
+                rainDrop.setAttribute("class", "rainDrop");
+                rainDrop.style.marginLeft = String(mariginLeft) + "px";
+                rainDrop.style.animationDelay = "-" + String(i) + "s";
+
+                let rainDropSlow = document.createElement("div");
+                rainSmake.appendChild(rainDropSlow);
+                rainDropSlow.setAttribute("class", "rainDropSlow");
+                rainDropSlow.style.marginLeft = String(mariginLeft) + "px";
+            }
+
+        } else if (weather.includes("Clou") == true || weather.includes("Overcast") == true) { //zamiast indexOf porownuje za pmoca includes bo w tym json odmieniają slowo cloud
+            body.setAttribute("class", "rain");
+            //weatherIco.setAttribute("class", "cloud");
+            clouds.style.display = 'block';
+            rainS.style.display = 'none';
+            gamePopup.remove();
+            gamePopupTimer.remove();
+            if (clickCount < 1) {   //sprawie ze gra pojawia sie tylko raz - mam problem z zerowaniem wyniku gry wiec ograniczylem gre do 1 razowgo pojawienia sie
+              hiddenGame();
+            }
+
+
+        } else if (weather.indexOf("Clear") >= 0) {
+            //body.setAttribute("class", "clear");
+            body.setAttribute("class", "clear");
+            weatherIco.setAttribute("class", "sun");
+            clouds.style.display = "none";
+            rainS.style.display = 'none';
+        }
+    }
+
+
+
+    function hiddenGame(clicks) {
+
+        clouds.style.pointerEvents = "none"; //blokuje chmury przed klikaniem na czas odliczania
+        let blockClickElement = document.createElement("div");
+        gameSpace.appendChild(gamePopup);
+        gameSpace.appendChild(gamePopupTimer);
+        body.appendChild(blockClickElement);
+
+        gamePopup.classList = "gamePopup";
+        gamePopupTimer.classList = "gamePopup";
+        blockClickElement.classList = "blockClickOpacity"
+        let countdown = 4;
+        let timeCount = 15;
+
+
+      setTimeout(function() {
+            gamePopup.innerText = "You have unlocked a secret game!"
+        }, 1000);
+
+
+        setTimeout(function() {
+
+            let countDownCount = setInterval(function() {
+                countdown -= 1;
+
+                gamePopup.innerText = "Try to clear the sky by clicking out all the clouds in " + countdown + " seconds";
+                gamePopupTimer.innerText = "Time left: 10";
+
+                if (countdown === 0) {
+                    clearInterval(countDownCount);
+                    gamePopup.style.color = "red";
+                    gamePopup.innerText = "START!!!";
+                    clouds.style.pointerEvents = "auto"
+                    clickClouds();
+                    countDisplay();
+
+                    let countTime = setInterval(function() {
+                        timeCount -= 1;
+                        gamePopupTimer.innerText = "Time left: " + timeCount;
+
+                        if (timeCount === 0) {
+                            clearInterval(countTime);
+                            clouds.style.pointerEvents = "none";
+
+                            setTimeout(function() { // uwuwam opo up z wynikiem wyniki po 6 sekundach
+                                gamePopup.remove();
+                                gamePopupTimer.remove();
+                            }, 6000);
+
+                        }
+
+                    }, 1000);
+
+                    //setTimeout(function(){ gamePopup.style.display = "none"; clouds.style.pointerEvents = "auto";  }, 1000);
+
+                }
+
+            }, 1000);
+
+        }, 6000);
+
+    }
 
     searchButton.addEventListener("click", function(event) {
-      rainbows.style.display = 'none';
+        rainbows.remove(); ;
 
         input = document.querySelector("#input");
-        var inputValue = input.value;
+        let inputValue = input.value;
 
         ul = document.querySelector("ul");
         if (ul != null) {
@@ -148,18 +251,7 @@ function weatherResults (data) {
             ul.parentNode.removeChild(ul);
         }
 
-
-        /*
-                function getJson() {
-
-                    $.getJSON("http://api.wunderground.com/api/55b1f2cf5780cb8a/conditions/q//" + inputValue + ".json", function(data) {
-
-                        console.log(data);
-
-                    });
-                };
-        */
-      var  $j = jQuery.noConflict();
+        let $j = jQuery.noConflict();
 
         $j.getJSON("https://api.wunderground.com/api/55b1f2cf5780cb8a/conditions/q//" + inputValue + ".json", function(data) {
 
@@ -170,21 +262,16 @@ function weatherResults (data) {
 
                 weatherResults(data);
 
-            }
-
-            else if (data.response.results.length > 1) {
+            } else if (data.response.results.length > 1) {     // gdy jest więcej niz jedno miasto (stacja badawcza) z szukaną nazwą
                 //console.log("Więcej niż jedno miasto z tą nazwą")
                 weatherIco.classList = "";
 
-
                 output = document.querySelector("#output");
-                output.innerText = "There are several cities with this name:";
-                var ul = document.createElement("ul");
+                output.innerText = "There are research stations with this name:";
+                let ul = document.createElement("ul");
                 searchResultsList.appendChild(ul);
 
-
-
-                for (var i = 0; i < data.response.results.length; i++) {
+                for (let i = 0; i < data.response.results.length; i++) {
                     console.log(data.response.results[i].city + " - " + data.response.results[i].country_name + " - " + data.response.results[i].state);
                     li = document.createElement("li");
                     buttonResults = document.createElement("button");
@@ -197,21 +284,17 @@ function weatherResults (data) {
 
                 }
 
-
                 buttonResults = document.querySelectorAll(".buttonResults");
 
-                for (var i = 0; i < data.response.results.length; i++) {
-                    //console.log("tatat");
-
+                for (let i = 0; i < data.response.results.length; i++) {
 
                     buttonResults[i].addEventListener("click", function(event) {
                         buttonResults = document.querySelectorAll(".buttonResults");
                         //console.log(this.previousElementSibling.dataset.manyResultLink);
 
-
                         $j.getJSON("https://api.wunderground.com/api/55b1f2cf5780cb8a/conditions/" + this.previousElementSibling.dataset.manyResultLink, function(data) {
 
-                          weatherResults (data);
+                            weatherResults(data);
 
                         });
 
@@ -222,30 +305,4 @@ function weatherResults (data) {
         });
 
     });
-      });
-
-
-
-
-
-
-
-
-
-    /*
-
-    //<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-
-    jQuery(document).ready(function($) {
-      $.ajax({
-      url : "http://api.wunderground.com/api/55b1f2cf5780cb8a/geolookup/conditions/q/IA/Cedar_Rapids.json",
-      dataType : "jsonp",
-      success : function(parsed_json) {
-      var location = parsed_json['location']['city'];
-      var temp_f = parsed_json['current_observation']['temp_f'];
-      console.log("Current temperature in " + location + " is: " + temp_f);
-      }
-      });
-    });
-
-    */
+});
