@@ -96,13 +96,6 @@ document.addEventListener("DOMContentLoaded", function() {
     function weatherResults(data) {
 
 
-      setCookie("cityCookie", inputValue, 7);
-      var cookies = document.cookie.split("; ")
-      console.log(cookies);
-
-
-
-
         let temp = data.current_observation.temp_c;
         let weather = data.current_observation.weather;
         let rainKm = data.current_observation.wind_gust_kph;
@@ -243,7 +236,14 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     searchButton.addEventListener("click", function(event) {
-        rainbows.remove(); ;
+        rainbows.remove();
+
+        input = document.querySelector("#input");
+        setCookie("cityCookie", input.value, 7);
+        var cookies = document.cookie.split("; ")
+        console.log(cookies);
+
+        
 
         input = document.querySelector("#input");
         let inputValue = input.value;
