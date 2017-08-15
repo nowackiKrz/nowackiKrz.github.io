@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         let $j = jQuery.noConflict();
 
-        $j.getJSON("https://api.wunderground.com/api/55b1f2cf5780cb8a/conditions/q//" + inputValue + ".json", function(data) {
+        $j.getJSON("https://api.wunderground.com/api/55b1f2cf5780cb8a/conditions/q//" + inputValue + ".jsonp", function(data) {
 
             //console.log(data);
 
