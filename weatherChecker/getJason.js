@@ -32,11 +32,12 @@ document.addEventListener("DOMContentLoaded", function() {
     let sumOfCloudsOpacity = 0;
     let clickCount = 0;
 
-
+/*
     let cookies = document.cookie.split("; ")
     console.log(cookies);
     input.value = cookies[0].split("=")[1]  //wczytuje nazwe miasta z cookies
 
+*/
 
 
         function setCookie(name, val, days) {
@@ -241,8 +242,11 @@ document.addEventListener("DOMContentLoaded", function() {
     searchButton.addEventListener("click", function(event) {
         rainbows.remove();
 
+/*
         input = document.querySelector("#input");
         setCookie("cityCookie", input.value, 7);
+
+        */
 
 
 
