@@ -30,9 +30,9 @@ document.addEventListener("DOMContentLoaded", function() {
     let l = "";
     let currentOpacity = 1;
     let sumOfCloudsOpacity = 0;
-    var clickCount = 0;
+    let clickCount = 0;
 
-
+    input.value = cookies[0].split("=")[1])  //wczytuje nazwe miasta z cookies 
 
 
 
@@ -244,7 +244,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let cookies = document.cookie.split("; ")
         console.log(cookies);
 
-        input.value = console.log(cookies[0].split("=")[1])
+
 
         ul = document.querySelector("ul");
         if (ul != null) {
