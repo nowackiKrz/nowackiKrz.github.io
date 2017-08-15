@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let sumOfCloudsOpacity = 0;
     let clickCount = 0;
 
-    input.value = cookies[0].split("=")[1])  //wczytuje nazwe miasta z cookies 
+    input.value = cookies[0].split("=")[1]  //wczytuje nazwe miasta z cookies 
 
 
 
