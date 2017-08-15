@@ -239,11 +239,12 @@ document.addEventListener("DOMContentLoaded", function() {
         rainbows.remove();
 
         input = document.querySelector("#input");
+        console.log(input.value);
         setCookie("cityCookie", input.value, 7);
         var cookies = document.cookie.split("; ")
         console.log(cookies);
 
-        
+
 
         input = document.querySelector("#input");
         let inputValue = input.value;
