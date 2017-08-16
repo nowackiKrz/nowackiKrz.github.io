@@ -43,7 +43,7 @@ animation: 14s linear menuDisplay;
 
 @media (max-width: 800px) {
   .searchMenu {
-     font-size: 26px;} }
+     font-size: 32px;} }
 
 
 
@@ -115,8 +115,8 @@ input {
 
 @media (max-width: 800px) {
   input {
-    height: 25px;
-    width: 120px;
+    height: 30px;
+    width: 130;
      font-size: 14px;} }
 
 
