@@ -32,7 +32,9 @@ document.addEventListener("DOMContentLoaded", function() {
     let sumOfCloudsOpacity = 0;
     var clickCount = 0;
 
+    var cookies = document.cookie.split("; ")
 
+    input.value = cookies[0].split("=")[1];
 
 
 
