@@ -33,6 +33,12 @@ body {
     overflow: hidden;
 }
 
+
+@media (max-width: 900px) {
+  body {
+    max-width: 900px}
+   }
+
 .searchMenu {
 animation: 14s linear menuDisplay;
  font-size: 60px;
