@@ -41,7 +41,7 @@ animation: 14s linear menuDisplay;
 
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .searchMenu {
     animation: 6s linear menuDisplay;
      font-size: 32px;} }
@@ -80,7 +80,7 @@ button {
 
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   button {
     padding: .2px;
      font-size: 14px;} }
@@ -114,7 +114,7 @@ input {
     text-transform:  lowercase;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   input {
     height: 36px;
     width: 120;
@@ -142,7 +142,7 @@ ul {
 
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .gamePopup {
     height: auto;
     width: 150px;
@@ -185,7 +185,7 @@ overflow-y: scroll;
     animation: hideRainbow 11s ease-in-out 3s forwards;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .rainbows {
     animation: 10s linear hideRainbow ;
     animation: hideRainbow 6s ease-in-out 3s forwards;}
