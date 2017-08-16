@@ -240,10 +240,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     searchButton.addEventListener("click", function(event) {
-        rainbows.remove(); ;
+        rainbows.remove();
 
         input = document.querySelector("#input");
         let inputValue = input.value;
+
+        setCookie("cityCookie", input.value, 7)
 
         ul = document.querySelector("ul");
         if (ul != null) {
