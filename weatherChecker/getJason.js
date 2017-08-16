@@ -33,8 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
     var clickCount = 0;
 
     var cookies = document.cookie.split("; ")
+    if (cookies[0].split("=")[1] != undefined) {
+      input.value = cookies[0].split("=")[1];
+    }
 
-    input.value = cookies[0].split("=")[1];
 
 
 
