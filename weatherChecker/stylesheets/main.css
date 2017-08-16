@@ -116,7 +116,7 @@ input {
 
 @media (max-width: 800px) {
   input {
-    height: 34px;
+    height: 36px;
     width: 120;
      font-size: 16px;} }
 
@@ -183,8 +183,15 @@ overflow-y: scroll;
 .rainbows {
     animation: 20s linear hideRainbow ;
     animation: hideRainbow 11s ease-in-out 3s forwards;
-
 }
+
+@media (max-width: 800px) {
+  .rainbows {
+    animation: 10s linear hideRainbow ;
+    animation: hideRainbow 6s ease-in-out 3s forwards;}
+   }
+
+
 
 @keyframes hideRainbow {
   0% {
