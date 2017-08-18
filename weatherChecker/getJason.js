@@ -260,7 +260,8 @@ document.addEventListener("DOMContentLoaded", function() {
       method: 'feed',
       href: 'https://raw.githubusercontent.com/nowackiKrz/nowackiKrz.github.io/master/weatherChecker/images/badge.png',
       redirect_uri:'https://nowackikrz.github.io/weatherChecker/index.html',
-
+      name:'weatherChecker',
+      link:'https://nowackikrz.github.io/weatherChecker/index.html',
 
 
     }, function(response){});
