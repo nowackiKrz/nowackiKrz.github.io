@@ -261,6 +261,7 @@ badgeClouds.addEventListener("click", function(event) {
     }
 
     searchButton.addEventListener("click", function(event) {
+        badgeClouds.style.display = 'none'
         rainbows.remove();
 
         input = document.querySelector("#input");
