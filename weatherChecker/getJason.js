@@ -258,7 +258,7 @@ document.addEventListener("DOMContentLoaded", function() {
     badgeClouds.addEventListener("click", function(event) {
             FB.ui({
       method: 'share',
-      href: 'https://raw.githubusercontent.com/nowackiKrz/nowackiKrz.github.io/master/weatherChecker/images/badge.png',
+      href: 'https://nowackikrz.github.io/weatherChecker/images/badge.png',
       redirect_uri:'https://nowackikrz.github.io/weatherChecker/index.html',
 
 
