@@ -258,10 +258,9 @@ document.addEventListener("DOMContentLoaded", function() {
     badgeClouds.addEventListener("click", function(event) {
             FB.ui({
               method: 'feed',
-              href: 'https://nowackikrz.github.io/weatherChecker/index.html',
+              href: 'https://nowackikrz.github.io/weatherChecker/images/badge.png',
               name: 'I have earn an Cloud Destroyer Badge. Want some? Visit WeatherCheker',
-              title: 'I have earn an Cloud Destroyer Badge. Want some? Visit WeatherCheker',
-              source: 'https://nowackikrz.github.io/weatherChecker/images/badge.png',
+              //title: 'I have earn an Cloud Destroyer Badge. Want some? Visit WeatherCheker',
               caption: 'weatherChecker',
               //description: 'weatherChecker',
 
