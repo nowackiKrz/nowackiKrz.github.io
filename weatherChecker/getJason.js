@@ -257,11 +257,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // wywoluje fb share na click - funkcja pobierajace dane z fb id jest w <script> w html
     badgeClouds.addEventListener("click", function(event) {
             FB.ui({
-      method: 'feed',
+      method: 'share',
       href: 'https://raw.githubusercontent.com/nowackiKrz/nowackiKrz.github.io/master/weatherChecker/images/badge.png',
       redirect_uri:'https://nowackikrz.github.io/weatherChecker/index.html',
-      name:'weatherChecker',
-      link:'https://nowackikrz.github.io/weatherChecker/index.html',
+
 
 
     }, function(response){});
