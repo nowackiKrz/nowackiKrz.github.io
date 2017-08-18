@@ -110,7 +110,7 @@ badgeClouds.addEventListener("click", function(event) {
         console.log("Suma opacity wynosi " + sumOfCloudsOpacity);
         if (sumOfCloudsOpacity <= 0) {
             alert("You're now officially a Cloud Destroyer, you little exterminator you!");
-
+            badgeClouds.style.display = 'block'
 
         }
     }
