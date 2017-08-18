@@ -8,6 +8,58 @@ document.addEventListener("DOMContentLoaded", function() {
     let gamePopup = document.createElement("div");
     let gamePopupTimer = document.createElement("div");
     let gameSpace = document.querySelector(".gameSpace");
+    let badgeClouds = document.querySelector(".badgeClouds");
+
+//fb app id
+
+/*
+    function init() {
+            FB.api(
+              '/l214.animaux',
+              {"fields":"fan_count"},
+              function(response) {
+                alert(response.fan_count);
+              }
+            );
+        }
+
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '1981255825478957',
+            xfbml      : true,
+            version    : 'v2.10'
+          });
+
+          init();
+        };
+
+        (function(d, s, id){
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) {return;}
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+
+badgeClouds.addEventListener("click", function(event) {
+        FB.ui({
+  method: 'share',
+  href: 'https://developers.facebook.com/docs/',
+}, function(response){});
+
+});
+
+*/
+
+badgeClouds.addEventListener("click", function(event) {
+        FB.ui({
+  method: 'share',
+  href: 'http://pngimg.com/uploads/mario/mario_PNG53.png',
+}, function(response){});
+
+});
+
 
     let rainbows = document.querySelector(".rainbows");
     let cloudFlow = document.querySelectorAll(".cloudFlow");
@@ -30,8 +82,9 @@ document.addEventListener("DOMContentLoaded", function() {
     let l = "";
     let currentOpacity = 1;
     let sumOfCloudsOpacity = 0;
-    var clickCount = 0;
+    let clickCount = 0;
 
+//na starcie strony uwstawiam cookies jezeli jest wczesniej pobrane
     var cookies = document.cookie.split("; ")
     if (cookies[0].split("=")[1] != undefined) {
       input.value = cookies[0].split("=")[1];
@@ -39,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
+// funkcja pobierajaca cookies
         function setCookie(name, val, days) {
         if (days) {
             var data = new Date();
@@ -63,9 +116,9 @@ document.addEventListener("DOMContentLoaded", function() {
             cloudFlow[i].addEventListener("click", function(event) {
 
                 let currentOpacity = this.style.opacity;
-                currentOpacity -= 0.4;
-                clickCount += 1;
-                if (currentOpacity < 0) {
+                currentOpacity -= 0.4;  //za kazdym klikiem w chmurke odejmuej 0,4 opacity od opacity: 1
+                clickCount += 1;  //licze kliki tzn punkty w grze
+                if (currentOpacity < 0) {  //nie chce miec ujemenego opacity (bo potem to zliczam by sprawdzic czy wszystkie chmurki sa odklikane) wiec jezli opacity jest na minusie to przyrownuje je do zera
                     currentOpacity = 0;
 
                     //this.remove();   - jak usuwam to musze je jeszce dodać w js bo sa obecnei tylko w html. najlepiej je tworzyc gdy sa chmury
@@ -80,29 +133,30 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function countDisplay(count) {
+
         gamePopup.innerHTML = "Score: " + count;
 
     }
 
+
+
     function cloudOpacityCounter() {
         sumOfCloudsOpacity = 0;
         for (let i = 0; i < cloudFlow.length; i++) {
-
             sumOfCloudsOpacity += Number(cloudFlow[i].style.opacity);
-
         }
         console.log("Suma opacity wynosi " + sumOfCloudsOpacity);
         if (sumOfCloudsOpacity <= 0) {
-            alert("Zniszczyles chmury!!!");
+            alert("You're now officially a Cloud Destroyer, you little exterminator you!");
+
+
         }
     }
 
+
+
+
     function weatherResults(data) {
-
-
-
-
-
 
         let temp = data.current_observation.temp_c;
         let weather = data.current_observation.weather;
@@ -191,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function() {
         gamePopup.classList = "gamePopup";
         gamePopupTimer.classList = "gamePopup";
         blockClickElement.classList = "blockClickOpacity"
-        let countdown = 4;
+        let countdown = 6;
         let timeCount = 15;
 
 
@@ -205,7 +259,8 @@ document.addEventListener("DOMContentLoaded", function() {
             let countDownCount = setInterval(function() {
                 countdown -= 1;
 
-                gamePopup.innerText = "Try to clear the sky by clicking out all the clouds in " + countdown + " seconds";
+                gamePopup.innerHTML = "Try to clear the sky by clicking out all the clouds in<span class='gameCountdown'> "+countdown+"</span> seconds";
+
                 gamePopupTimer.innerText = "Time left: 10";
 
                 if (countdown === 0) {
@@ -249,7 +304,7 @@ document.addEventListener("DOMContentLoaded", function() {
         input = document.querySelector("#input");
         let inputValue = input.value;
 
-        setCookie("cityCookie", input.value, 7)
+        setCookie("cityCookie", input.value, 7)  // podczas wyszukiwania pobieram cookie tzn wartosc inputa
 
         ul = document.querySelector("ul");
         if (ul != null) {

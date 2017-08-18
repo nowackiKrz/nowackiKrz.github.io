@@ -146,6 +146,14 @@ ul {
   font-family: 'Open Sans', sans-serif;
   font-size: 24px;
 
+
+
+}
+
+.fb-like {
+  width: 50px;
+  height: 50px;
+  background-color: red;
 }
 
 @media (max-width: 900px) {
@@ -161,7 +169,12 @@ ul {
 margin: 0 auto;
 margin-bottom: 20%;
 
+}
 
+.gameCountdown{
+  color:red;
+  font-size: 26px;
+  font-weight: bold;
 }
 
 .blockClickOpacity{
