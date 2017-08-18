@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
 badgeClouds.addEventListener("click", function(event) {
         FB.ui({
   method: 'share',
-  href: 'images/badge.png',
+  href: 'https://raw.githubusercontent.com/nowackiKrz/nowackiKrz.github.io/master/weatherChecker/images/badge.png',
 }, function(response){});
 
 });
