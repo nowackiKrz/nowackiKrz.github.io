@@ -260,7 +260,7 @@ document.addEventListener("DOMContentLoaded", function() {
               method: 'feed',
               href: 'https://nowackikrz.github.io/weatherChecker/index.html',
               name: 'I have earn an Cloud Destroyer Badge. Want some? Visit WeatherCheker',
-              title: 'I have earn an Cloud Destroyer Badge. Want some? Visit WeatherCheker',
+              //title: 'I have earn an Cloud Destroyer Badge. Want some? Visit WeatherCheker',
               source: 'https://nowackikrz.github.io/weatherChecker/images/badge.png',
               caption: 'weatherChecker',
               //description: 'weatherChecker',
