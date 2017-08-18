@@ -10,17 +10,10 @@ document.addEventListener("DOMContentLoaded", function() {
     let gameSpace = document.querySelector(".gameSpace");
     let badgeClouds = document.querySelector(".badgeClouds");
 
-//fb app id
 
 
 
-badgeClouds.addEventListener("click", function(event) {
-        FB.ui({
-  method: 'share',
-  href: 'https://raw.githubusercontent.com/nowackiKrz/nowackiKrz.github.io/master/weatherChecker/images/badge.png',
-}, function(response){});
 
-});
 
 
     let rainbows = document.querySelector(".rainbows");
@@ -259,6 +252,18 @@ badgeClouds.addEventListener("click", function(event) {
         }, 6000);
 
     }
+
+
+    // wywoluje fb share na click - funkcja pobierajace dane z fb id jest w <script> w html
+    badgeClouds.addEventListener("click", function(event) {
+            FB.ui({
+      method: 'share',
+      href: 'https://raw.githubusercontent.com/nowackiKrz/nowackiKrz.github.io/master/weatherChecker/images/badge.png',
+    }, function(response){});
+
+    });
+
+    
 
     searchButton.addEventListener("click", function(event) {
         badgeClouds.style.display = 'none'
