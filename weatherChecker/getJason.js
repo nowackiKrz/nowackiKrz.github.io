@@ -259,11 +259,12 @@ document.addEventListener("DOMContentLoaded", function() {
             FB.ui({
       method: 'share',
       href: 'https://raw.githubusercontent.com/nowackiKrz/nowackiKrz.github.io/master/weatherChecker/images/badge.png',
+      redirect_uri:'https://nowackikrz.github.io/weatherChecker/index.html',
     }, function(response){});
 
     });
 
-    
+
 
     searchButton.addEventListener("click", function(event) {
         badgeClouds.style.display = 'none'
