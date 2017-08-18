@@ -259,6 +259,7 @@ document.addEventListener("DOMContentLoaded", function() {
             FB.ui({
               method: 'share',
               href: 'https://nowackikrz.github.io/weatherChecker/index.html',
+              name: 'I have earn an Cloud Destroyer Badge. Want some? Visit WeatherCheker',
               title: 'I have earn an Cloud Destroyer Badge. Want some? Visit WeatherCheker',
               picture: 'https://nowackikrz.github.io/weatherChecker/images/badge.png',
               caption: 'weatherChecker',
