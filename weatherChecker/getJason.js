@@ -12,50 +12,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //fb app id
 
-/*
-    function init() {
-            FB.api(
-              '/l214.animaux',
-              {"fields":"fan_count"},
-              function(response) {
-                alert(response.fan_count);
-              }
-            );
-        }
-
-        window.fbAsyncInit = function() {
-          FB.init({
-            appId      : '1981255825478957',
-            xfbml      : true,
-            version    : 'v2.10'
-          });
-
-          init();
-        };
-
-        (function(d, s, id){
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) {return;}
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
 
 
 badgeClouds.addEventListener("click", function(event) {
         FB.ui({
   method: 'share',
-  href: 'https://developers.facebook.com/docs/',
-}, function(response){});
-
-});
-
-*/
-
-badgeClouds.addEventListener("click", function(event) {
-        FB.ui({
-  method: 'share',
-  href: 'http://pngimg.com/uploads/mario/mario_PNG53.png',
+  href: 'images/badge.png',
 }, function(response){});
 
 });
