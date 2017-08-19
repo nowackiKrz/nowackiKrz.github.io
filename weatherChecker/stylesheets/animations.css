@@ -1,9 +1,76 @@
 /*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5jc3MiLCJzb3VyY2VzIjpbIm1haW4uc2NzcyJdLCJzb3VyY2VzQ29udGVudCI6WyJcbiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIn0= */
 
+@keyframes menuDisplay {
+  0% {
+    opacity: 0; }
+
+
+    80% {
+      opacity: 0;  }
+
+  100% {
+    opacity: 1}
+}
+
+
+@keyframes hideRainbow {
+  0% {
+    height: 0px;
+  }
+
+  50% {
+    opacity:1
+  }
+
+  75% {
+    opacity:1
+  }
+
+  100% {
+    opacity:0;
+  }
+
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+
+
+  }
+  50% {
+    transform: rotate(180deg);
+
+  }
+
+  75% {
+    transform: rotate(180deg);
+
+
+  }
 
 
 
+  }
 
+  100% {
+    transform: rotate(180deg);
+
+
+  }
+
+}
+
+
+@keyframes mymove {
+    0%   {border: 20px solid #f1c40f;}
+    100% {border: 20px solid #FF6600;}
+}
+
+
+
+/* animacja chmur */
 @keyframes animateCloud
 {
     0% {margin-left: -800px}
@@ -15,3 +82,36 @@
       opacity: .1;
     }
 }
+
+
+/* Animations */
+
+@keyframes cloud {
+  0% { opacity: 0; }
+  50% { opacity: 0.3; }
+  100% {
+    opacity: 0;
+    transform: scale(0.5) translate(-200%, -3em);
+  }
+}
+
+
+
+@keyframes rainFalls
+  {
+      0% {margin-top: -20px}
+
+      80%  {
+        margin-top: 80vh;
+        width: .4px;
+        height: 10px;
+
+      }
+
+      100%  {
+        margin-top: 100vh;
+        width: .4px;
+        height: 10px;
+
+      }
+  }
