@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 gamePopup.innerHTML = "Try to clear the sky by clicking out all the clouds in<span class='gameCountdown'> "+countdown+"</span> seconds";
 
-                gamePopupTimer.innerText = "Time left: 10";
+                gamePopupTimer.innerText = "Time left: 15 sek";
 
                 if (countdown === 0) {
                     clearInterval(countDownCount);
@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                     let countTime = setInterval(function() {
                         timeCount -= 1;
-                        gamePopupTimer.innerText = "Time left: " + timeCount;
+                        gamePopupTimer.innerText = "Time left: " + timeCount + "sek";
 
                         if (timeCount === 0) {
                             clearInterval(countTime);
