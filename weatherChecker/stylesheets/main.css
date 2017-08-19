@@ -215,6 +215,7 @@ width: 100vw;
 background-color: rgba(32, 214, 173, 1);
 position:relative;
 overflow-y: scroll;
+overflow-x: hidden;
 
 
 /* background: linear-gradient(to bottom, grey 0%, white 100%);  */
@@ -226,6 +227,7 @@ overflow-y: scroll;
 .rainbows {
     animation: 20s linear hideRainbow ;
     animation: hideRainbow 11s ease-in-out 3s forwards;
+
 }
 
 @media (max-width: 900px) {
