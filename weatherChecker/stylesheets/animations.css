@@ -2,7 +2,8 @@
 .clouds {
   display: none;
   opacity: 0.8;
-}
+  overflow: hidden;  /*dopisalem na ostatnim warsztacie */
+  height: 800px;   /*dopisalem na ostatnim warsztacie */
 
 
 .cloudFlow {

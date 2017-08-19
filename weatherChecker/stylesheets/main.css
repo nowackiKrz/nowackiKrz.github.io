@@ -237,6 +237,7 @@ overflow-y: scroll;
 .rainbows {
     animation: 20s linear hideRainbow ;
     animation: hideRainbow 11s ease-in-out 3s forwards;
+    
 }
 
 @media (max-width: 900px) {
