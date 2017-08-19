@@ -42,7 +42,7 @@ body {
    }
 
 .searchMenu {
-animation: 8s linear menuDisplay;
+animation: 7s linear menuDisplay;
  font-size: 60px;
 
  font-family: 'Pacifico', cursive;
@@ -225,7 +225,7 @@ overflow-x: hidden;
 
 
 .rainbows {
-    animation: 20s linear hideRainbow ;
+    animation: 18s linear hideRainbow ;
     animation: hideRainbow 11s ease-in-out 3s forwards;
 
 }
