@@ -180,7 +180,7 @@ img {
 }
 
 @media (max-width: 900px) {
-  img {
+  .badgeCloudsContainer {
  display: none;}
 }
 
