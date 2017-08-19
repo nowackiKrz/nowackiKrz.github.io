@@ -265,8 +265,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
            picture: 'https://nowackikrz.github.io/weatherChecker/images/badge.png',
            caption: 'https://nowackikrz.github.io/weatherChecker/index.html',
-           description: msg,
-           message: msg
+           description: "wiadomosc",
+
 
 
 
