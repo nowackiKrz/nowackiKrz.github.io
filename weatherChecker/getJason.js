@@ -80,18 +80,20 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
                 this.style.opacity = currentOpacity.toString();
                 cloudOpacityCounter();
-                countDisplay(clickCount);
-
+                //countDisplay(clickCount);
+                gamePopup.innerHTML = "Score: " + clickCount;
             });
 
         }
     }
 
+/*
     function countDisplay(count) {
 
         gamePopup.innerHTML = "Score: " + count;
 
     }
+    */
 
 
 
