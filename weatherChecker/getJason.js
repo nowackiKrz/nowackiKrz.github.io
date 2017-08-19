@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Suma opacity wynosi " + sumOfCloudsOpacity);
         if (sumOfCloudsOpacity <= 0) {
             alert("You're now officially a Cloud Destroyer, you little exterminator you!");
-            clouds.style.pointerEvents = "auto" // jeżeli ktoś znieszczyl wszystkie chmury to odblokowuje mozliwosc klikniecia bo wtedy moze kliknac by poszerowac odznake
+          //  clouds.style.pointerEvents = "auto" // jeżeli ktoś znieszczyl wszystkie chmury to odblokowuje mozliwosc klikniecia bo wtedy moze kliknac by poszerowac odznakę
             badgeClouds.style.display = 'block';
             badgeCloudsContainer.style.display = 'block';
 
