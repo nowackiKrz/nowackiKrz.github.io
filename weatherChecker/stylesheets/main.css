@@ -179,10 +179,11 @@ img {
   display: none;
 }
 
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .badgeCloudsContainer {
  display: none;}
 }
+*/
 
 .blockClickOpacity{
   width: 100vh;
