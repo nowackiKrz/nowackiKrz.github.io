@@ -177,7 +177,15 @@ margin-bottom: 20%;
 
 img {
   display: none;
+
 }
+
+ @media (max-width: 900px) {
+  img {
+ display: none;}
+}
+
+
 
 /* @media (max-width: 900px) {
   .badgeCloudsContainer {
