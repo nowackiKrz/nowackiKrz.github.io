@@ -266,7 +266,7 @@ document.addEventListener("DOMContentLoaded", function() {
             FB.ui({
       method: 'share',
       display: 'iframe',
-      href: 'https://nowackikrz.github.io/weatherChecker/images/badge2.png',
+      href: 'https://nowackikrz.github.io/weatherChecker/images/badge%202.png',
       redirect_uri:'https://nowackikrz.github.io/weatherChecker/index.html',
 
 
