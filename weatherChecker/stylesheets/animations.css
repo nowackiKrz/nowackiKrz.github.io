@@ -1,5 +1,7 @@
 /*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5jc3MiLCJzb3VyY2VzIjpbIm1haW4uc2NzcyJdLCJzb3VyY2VzQ29udGVudCI6WyJcbiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIn0= */
 
+
+/* animacja menu wyszukiwania*/
 @keyframes menuDisplay {
   0% {
     opacity: 0; }
@@ -13,6 +15,7 @@
 }
 
 
+/* animacja teczy*/
 @keyframes hideRainbow {
   0% {
     height: 0px;
@@ -32,6 +35,8 @@
 
 }
 
+
+/* animacja zakrywania teczy*/
 
 @keyframes rotate {
   0% {
@@ -63,7 +68,7 @@
 }
 
 
-@keyframes mymove {
+@keyframes sunAnimate {
     0%   {border: 20px solid #f1c40f;}
     100% {border: 20px solid #FF6600;}
 }
@@ -84,7 +89,7 @@
 }
 
 
-/* Animations */
+/* Animations chmura
 
 @keyframes cloud {
   0% { opacity: 0; }
@@ -95,7 +100,9 @@
   }
 }
 
+*/
 
+/* Animations deszcz */
 
 @keyframes rainFalls
   {

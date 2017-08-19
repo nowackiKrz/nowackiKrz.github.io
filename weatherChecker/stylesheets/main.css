@@ -400,7 +400,7 @@ overflow-y: scroll;
     position: relative;
     border: 20px solid #f1c40f;
     border-radius: 100%;
-    animation: mymove 2s infinite;
+    animation: sunAnimate 2s infinite;
 
 }
 
