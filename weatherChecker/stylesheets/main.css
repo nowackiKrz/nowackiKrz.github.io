@@ -179,10 +179,21 @@ margin-bottom: 20%;
 
 .badgeCloudsContainer {
   display: none;
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
 
 }
+
+@media (max-width: 900px) {
+.badgeCloudsContainer {
+  display: none;
+  height: 200px;
+  width: 200px;
+}
+}
+
+
 
 img {
   display: none;
