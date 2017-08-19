@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("You're now officially a Cloud Destroyer, you little exterminator you!");
             badgeClouds.style.display = 'block';
             badgeCloudsContainer.style.display = 'block';
-            
+
 
         }
     }
@@ -172,6 +172,7 @@ document.addEventListener("DOMContentLoaded", function() {
             body.setAttribute("class", "rain");
             //weatherIco.setAttribute("class", "cloud");
             clouds.style.display = 'block';
+            clouds.style.overflow = 'hidden';
             rainS.style.display = 'none';
             gamePopup.remove();
             gamePopupTimer.remove();
@@ -225,6 +226,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     gamePopup.style.color = "red";
                     gamePopup.innerText = "START!!!";
                     clouds.style.pointerEvents = "auto"
+
                     clickClouds();
                     countDisplay();
 
