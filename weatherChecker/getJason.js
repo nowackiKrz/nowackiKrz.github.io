@@ -268,7 +268,8 @@ document.addEventListener("DOMContentLoaded", function() {
       display: 'iframe',
       href: 'https://nowackikrz.github.io/weatherChecker/images/badge%202.png',
       redirect_uri:'https://nowackikrz.github.io/weatherChecker/index.html',
-      quote:'WeatherChecker confirmed. Im now officially a Cloud Destroyer!',
+      hashtag: '#weatherChecker',
+      quote:'WeatherChecker confirmed. Im now officially a Cloud Destroyer, child of Thunder!',
 
     }, function(response){});
 
