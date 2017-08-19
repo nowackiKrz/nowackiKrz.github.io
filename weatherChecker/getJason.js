@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", function() {
         gamePopupTimer.classList = "gamePopup";
         blockClickElement.classList = "blockClickOpacity"
         let countdown = 6;
-        let timeCount = 15;
+        let timeCount = 21;
 
 
       setTimeout(function() {
