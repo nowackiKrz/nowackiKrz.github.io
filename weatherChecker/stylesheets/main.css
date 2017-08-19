@@ -51,7 +51,7 @@ animation: 9s linear menuDisplay;
 
 @media (max-width: 900px) {
   .searchMenu {
-    animation: 6s linear menuDisplay;
+    animation: 3s linear menuDisplay;
      font-size: 32px;} }
 
 
