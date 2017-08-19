@@ -21,6 +21,8 @@ outline: 0;
 }
 
 
+
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 30px;
@@ -175,12 +177,20 @@ margin-bottom: 20%;
 }
 
 
+.badgeCloudsContainer {
+  display: none;
+  height: 200px;
+  width: 200px;
+
+}
+
 img {
   display: none;
   max-width: 100%;
   height: auto;
-
 }
+
+
 
 
 
