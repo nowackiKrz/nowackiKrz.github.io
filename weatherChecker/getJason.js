@@ -80,20 +80,20 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
                 this.style.opacity = currentOpacity.toString();
                 cloudOpacityCounter();
-                //countDisplay(clickCount);
-                gamePopup.innerHTML = "Score: " + clickCount;
+                countDisplay(clickCount);
+
             });
 
         }
     }
 
-/*
-    function countDisplay(count) {
 
+    function countDisplay(count) {
+        gamePopup.innerHTML = "Score: 0 ";
         gamePopup.innerHTML = "Score: " + count;
 
     }
-    */
+
 
 
 
@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function() {
         gamePopupTimer.classList = "gamePopup";
         blockClickElement.classList = "blockClickOpacity"
         let countdown = 6;
-        let timeCount = 21;
+        let timeCount = 16;
 
 
       setTimeout(function() {
