@@ -150,9 +150,8 @@ ul {
 
 }
 
-img {
-  display: none;
-}
+
+
 
 @media (max-width: 900px) {
   .gamePopup {
@@ -173,6 +172,16 @@ margin-bottom: 20%;
   color:red;
   font-size: 26px;
   font-weight: bold;
+}
+
+
+img {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  img {
+ display: none;}
 }
 
 .blockClickOpacity{
