@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function() {
             body.setAttribute("class", "rain");
             //weatherIco.setAttribute("class", "cloud");
             clouds.style.display = 'block';
-            clouds.style.overflow = 'hidden';
+            //clouds.style.overflow = 'hidden';
             rainS.style.display = 'none';
             gamePopup.remove();
             gamePopupTimer.remove();
