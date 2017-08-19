@@ -308,7 +308,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 weatherIco.classList = "";
 
                 output = document.querySelector("#output");
-                output.innerText = "There are research stations with this name:";
+                output.innerText = "There are several research stations with this name:";
                 let ul = document.createElement("ul");
                 searchResultsList.appendChild(ul);
 
