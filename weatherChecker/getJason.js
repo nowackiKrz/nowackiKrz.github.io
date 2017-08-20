@@ -89,8 +89,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     function countDisplay(count) {
+      if (count == undefined) {
         gamePopup.innerHTML = "Score: 0 ";
+      }
+      else {
         gamePopup.innerHTML = "Score: " + count;
+      }
+
 
     }
 
