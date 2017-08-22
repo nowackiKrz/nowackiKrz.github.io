@@ -1,27 +1,20 @@
 /*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5jc3MiLCJzb3VyY2VzIjpbIm1haW4uc2NzcyJdLCJzb3VyY2VzQ29udGVudCI6WyJcbiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIn0= */
 
 @import url('https://fonts.googleapis.com/css?family=Arvo|Kaushan+Script|Pacifico|Zilla+Slab+Highlight');
-
-
 @import url('animations.css');
-
 * {
-margin: 0;
-padding: 0;
-border: 0;
-line-height: 1.4em;
-vertical-align: baseline;
-text-decoration: none;
-outline: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 1.4em;
+    vertical-align: baseline;
+    text-decoration: none;
+    outline: 0;
 }
-
 
 .invisible {
-  display: none;
+    display: none;
 }
-
-
-
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -35,38 +28,31 @@ body {
     overflow: hidden;
 }
 
-
 @media (max-width: 900px) {
-  body {
-    max-width: 900px}
-   }
+    body {
+        max-width: 900px
+    }
+}
 
 .searchMenu {
-animation: 7s linear menuDisplay;
- font-size: 60px;
-
- font-family: 'Pacifico', cursive;
-
+    animation: 7s linear menuDisplay;
+    font-size: 60px;
+    font-family: 'Pacifico', cursive;
 }
 
 @media (max-width: 900px) {
-  .searchMenu {
-    animation: 3s linear menuDisplay;
-     font-size: 32px;} }
-
-
-
-
-
-.mainCointener {
-  position: absolute;
-  left: 50%;
-  top: 20%;
-  transform: translate(-50%);
+    .searchMenu {
+        animation: 3s linear menuDisplay;
+        font-size: 32px;
+    }
 }
 
-
-
+.mainCointener {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%);
+}
 
 button {
     color: #004d99;
@@ -74,21 +60,19 @@ button {
     padding: .5px;
     border: solid 5px #6496c8;
     font-size: 22px;
-
 }
 
 @media (max-width: 900px) {
-  button {
-    padding: .2px;
-     font-size: 14px;} }
-
-
+    button {
+        padding: .2px;
+        font-size: 14px;
+    }
+}
 
 button:hover {
-  color: #004d99;
-  background: rgba(0, 0, 0, 0);
-  border: solid 5px #5078A0;
-
+    color: #004d99;
+    background: rgba(0, 0, 0, 0);
+    border: solid 5px #5078A0;
 }
 
 button.buttonResults {
@@ -99,100 +83,85 @@ button.buttonResults {
     padding: 0px;
 }
 
-
 input {
     margin-top: 22px;
     /* margin-left: -12px; */
     height: 40px;
     width: 280px;
     font-size: 30px;
-    color:#5f6062;
+    color: #5f6062;
     background-color: pink;
-    text-transform:  lowercase;
+    text-transform: lowercase;
 }
 
 @media (max-width: 900px) {
-  input {
-    height: 36px;
-    width: 120;
-     font-size: 16px;} }
-
-
-
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  background-color: pink;
+    input {
+        height: 36px;
+        width: 120;
+        font-size: 16px;
+    }
 }
 
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    background-color: pink;
+}
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 .gamePopup {
-
-  height: auto;
-  width: 300px;
-  background: pink;
-  margin: 0 auto;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 24px;
-
-
-
-}
-
-
-
-
-@media (max-width: 900px) {
-  .gamePopup {
     height: auto;
-    width: 150px;
+    width: 300px;
     background: pink;
     margin: 0 auto;
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;} }
-
-.gameSpace {
-margin: 0 auto;
-margin-bottom: 20%;
-
-}
-
-.gameCountdown{
-  color:red;
-  font-size: 26px;
-  font-weight: bold;
-}
-
-
-.badgeCloudsContainer {
-  display: none;
-  height: 300px;
-  width: 300px;
-  margin: 0 auto;
-
+    font-size: 24px;
 }
 
 @media (max-width: 900px) {
+    .gamePopup {
+        height: auto;
+        width: 150px;
+        background: pink;
+        margin: 0 auto;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+    }
+}
+
+.gameSpace {
+    margin: 0 auto;
+    margin-bottom: 20%;
+}
+
+.gameCountdown {
+    color: red;
+    font-size: 26px;
+    font-weight: bold;
+}
+
 .badgeCloudsContainer {
-  display: none;
-  height: 200px;
-  width: 200px;
-}
+    display: none;
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
 }
 
-
+@media (max-width: 900px) {
+    .badgeCloudsContainer {
+        display: none;
+        height: 200px;
+        width: 200px;
+    }
+}
 
 img {
-  display: none;
-  max-width: 100%;
-  height: auto;
+    display: none;
+    max-width: 100%;
+    height: auto;
 }
-
-
-
-
 
 
 /* @media (max-width: 900px) {
@@ -201,173 +170,140 @@ img {
 }
 */
 
-.blockClickOpacity{
-  width: 100vh;
-  height: 100vw;
-  opacity: 1;
+.blockClickOpacity {
+    width: 100vh;
+    height: 100vw;
+    opacity: 1;
 }
-
 
 .bckGradien {
-
-height: 100vh;
-width: 100vw;
-background-color: rgba(32, 214, 173, 1);
-position:relative;
-overflow-y: scroll;
-overflow-x: hidden;
-
-
-/* background: linear-gradient(to bottom, grey 0%, white 100%);  */
-
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(32, 214, 173, 1);
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* background: linear-gradient(to bottom, grey 0%, white 100%);  */
 }
 
-
-
 .rainbows {
-    animation: 18s linear hideRainbow ;
+    animation: 18s linear hideRainbow;
     animation: hideRainbow 11s ease-in-out 3s forwards;
-
 }
 
 @media (max-width: 900px) {
-  .rainbows {
-    animation: 10s linear hideRainbow ;
-    animation: hideRainbow 6s ease-in-out 3s forwards;}
-   }
-
-
-
-
+    .rainbows {
+        animation: 10s linear hideRainbow;
+        animation: hideRainbow 6s ease-in-out 3s forwards;
+    }
+}
 
 .rainbowRed {
-  width: 1400px;
-  height: 1400px;
-  background-color: red;
-  border-radius: 100%;
-  margin: 0 auto;
-  position: relative;
-  top:200px;
-
+    width: 1400px;
+    height: 1400px;
+    background-color: red;
+    border-radius: 100%;
+    margin: 0 auto;
+    position: relative;
+    top: 200px;
 }
 
 .rainbowOrange {
-  width: 1300px;
-  height: 1300px;
-  background-color: orange;
-  border-radius: 100%;
-  margin: 0 auto;
-  position: absolute;
-  top:5%;
-  left: 4%;
+    width: 1300px;
+    height: 1300px;
+    background-color: orange;
+    border-radius: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 5%;
+    left: 4%;
 }
 
 .rainbowYellow {
-  width: 1200px;
-  height: 1200px;
-  background-color: yellow;
-  border-radius: 100%;
-  margin: 0 auto;
-  position: absolute;
-  top:5%;
-  left: 4%;
+    width: 1200px;
+    height: 1200px;
+    background-color: yellow;
+    border-radius: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 5%;
+    left: 4%;
 }
 
 .rainbowGreen {
-  width: 1100px;
-  height: 1100px;
-  background-color: green;
-  border-radius: 100%;
-  margin: 0 auto;
-  position: absolute;
-  top:5%;
-  left: 4%;
+    width: 1100px;
+    height: 1100px;
+    background-color: green;
+    border-radius: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 5%;
+    left: 4%;
 }
 
 .rainbowBlue {
-  width: 1000px;
-  height: 1000px;
-  background-color: blue;
-  border-radius: 100%;
-  margin: 0 auto;
-  position: absolute;
-  top:5%;
-  left: 5%;
+    width: 1000px;
+    height: 1000px;
+    background-color: blue;
+    border-radius: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 5%;
+    left: 5%;
 }
 
-
 .rainbowViolet {
-  width: 900px;
-  height: 900px;
-  background-color: purple;
-  border-radius: 100%;
-  margin: 0 auto;
-  position: absolute;
-  top:5%;
-  left: 6%;
+    width: 900px;
+    height: 900px;
+    background-color: purple;
+    border-radius: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 5%;
+    left: 6%;
 }
 
 .rainbowSmallest {
-  width: 800px;
-  height: 800px;
-  background-color: rgba(32, 214, 173, 1);
-  border-radius: 100%;
-  margin: 0 auto;
-  position: absolute;
-  top:5%;
-  left: 6%;
+    width: 800px;
+    height: 800px;
+    background-color: rgba(32, 214, 173, 1);
+    border-radius: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 5%;
+    left: 6%;
 }
 
-
-.top,
-.bottom {
-  height: 900px;
-  width: 1800px;
+.top, .bottom {
+    height: 900px;
+    width: 1800px;
 }
-
-
 
 .top {
-  background: #9e978e;
-  margin: 0 1em 1em 0;
-  border-top-left-radius: 1800px;
-  border-top-right-radius: 1800px;
+    background: #9e978e;
+    margin: 0 1em 1em 0;
+    border-top-left-radius: 1800px;
+    border-top-right-radius: 1800px;
 }
-
-
 
 .rotate {
-  animation: 12s linear rotate;
-  animation-delay: 1s;
-  background-color: rgba(32, 214, 173, 1);
-  position: absolute;
-  bottom: 430px;
-  transform: translate();
-  left: -50%;
-  transform-origin: 50% 100%;
-  box-shadow: 10px 10px 16px rgba(32, 214, 173, 1);;
-
+    animation: 12s linear rotate;
+    animation-delay: 1s;
+    background-color: rgba(32, 214, 173, 1);
+    position: absolute;
+    bottom: 430px;
+    transform: translate();
+    left: -50%;
+    transform-origin: 50% 100%;
+    box-shadow: 10px 10px 16px rgba(32, 214, 173, 1);
+    ;
 }
-
-
-
-
-
-
-
-
 
 .rain {
     height: 100vh;
-
     background-color: grey;
-
-
-
-  /*  background: linear-gradient(to bottom, grey 0%, black 100%); */
+    /*  background: linear-gradient(to bottom, grey 0%, black 100%); */
 }
-
-
 
 .clear {
     background-color: #cce6ff;
@@ -375,8 +311,6 @@ overflow-x: hidden;
 }
 
 .searchResults {
-
-
     font-size: 24px;
 }
 
@@ -385,11 +319,8 @@ overflow-x: hidden;
     margin-left: 40px;
 }
 
-
-
-
 #weatherIco {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .sun {
@@ -402,13 +333,10 @@ overflow-x: hidden;
     position: relative;
     border: 20px solid #f1c40f;
     border-radius: 100%;
-    animation: mymove 2s infinite;
-
+    animation: sunAnimate 2s infinite;
 }
 
-
-
-  .cloud {
+.cloud {
     position: relative;
     width: 3.6875em;
     height: 3.6875em;
@@ -416,239 +344,196 @@ overflow-x: hidden;
     margin-left: 20px;
     background: currentColor;
     border-radius: 50%;
-    box-shadow:
-      -2.1875em 0.6875em 0 -0.6875em,
-      2.0625em 0.9375em 0 -0.9375em,
-      0 0 0 0.375em #fff,
-      -2.1875em 0.6875em 0 -0.3125em #fff,
-      2.0625em 0.9375em 0 -0.5625em #fff;
-
-  }
+    box-shadow: -2.1875em 0.6875em 0 -0.6875em, 2.0625em 0.9375em 0 -0.9375em, 0 0 0 0.375em #fff, -2.1875em 0.6875em 0 -0.3125em #fff, 2.0625em 0.9375em 0 -0.5625em #fff;
+}
 
 .cloud::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: -0.5em;
-  display: block;
-  width: 4.5625em;
-  height: 1em;
-  background: currentColor;
-  box-shadow: 0 0.4375em 0 -0.0625em #fff;
-
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -0.5em;
+    display: block;
+    width: 4.5625em;
+    height: 1em;
+    background: currentColor;
+    box-shadow: 0 0.4375em 0 -0.0625em #fff;
 }
-
 
 .clouds {
-  display: none;
-  opacity: 0.8;
-
-  overflow: hidden;
-  height: 800px;
-
+    display: none;
+    opacity: 0.8;
+    overflow: hidden;
+    height: 800px;
 }
 
-
 .cloudFlow {
-  width: 200px;
-  height: 80px;
-  background-color: lightblue;
-  background: #f2f9fe;
-
-	background: linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
-	background: -webkit-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
-	background: -moz-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
-	background: -ms-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
-	background: -o-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
-  border-radius: 100px;
-  position: relative;
-
-
+    width: 200px;
+    height: 80px;
+    background-color: lightblue;
+    background: #f2f9fe;
+    background: linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+    background: -webkit-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+    background: -moz-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+    background: -ms-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+    background: -o-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+    border-radius: 100px;
+    position: relative;
 }
 
 .cloudFlow:after, .cloudFlow:before {
-	content: '';
-	position: absolute;
-	background: #f2f9fe;
-	z-index: -1
+    content: '';
+    position: absolute;
+    background: #f2f9fe;
+    z-index: -1
 }
 
 .cloudFlow::before {
-  width: 80px;
-  height: 80px;
-
-  border-radius: 100%;
-  top: -30px;
-  left: 30px;
-
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    top: -30px;
+    left: 30px;
 }
 
-
-
 .cloudFlow::after {
-  width: 100px;
-  height: 100px;
-
-  border-radius: 100%;
-  top: -50px;
-  left: 80px;
-
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    top: -50px;
+    left: 80px;
 }
 
 .x1fast {
-	-webkit-animation: animateCloud 10s linear infinite;
-	-moz-animation: animateCloud 10s linear infinite;
-	animation: animateCloud 10s linear infinite;
-
-	-webkit-transform: scale(0.2);
-	-moz-transform: scale(0.2);
-	transform: scale(0.2);
+    -webkit-animation: animateCloud 10s linear infinite;
+    -moz-animation: animateCloud 10s linear infinite;
+    animation: animateCloud 10s linear infinite;
+    -webkit-transform: scale(0.2);
+    -moz-transform: scale(0.2);
+    transform: scale(0.2);
 }
-
-
 
 .x1 {
-	-webkit-animation: animateCloud 15s linear infinite;
-	-moz-animation: animateCloud 15s linear infinite;
-	animation: animateCloud 15s linear infinite;
-
-	-webkit-transform: scale(0.3);
-	-moz-transform: scale(0.3);
-	transform: scale(0.3);
+    -webkit-animation: animateCloud 15s linear infinite;
+    -moz-animation: animateCloud 15s linear infinite;
+    animation: animateCloud 15s linear infinite;
+    -webkit-transform: scale(0.3);
+    -moz-transform: scale(0.3);
+    transform: scale(0.3);
 }
 
-
-
 .x2 {
-	-webkit-animation: animateCloud 20s linear infinite;
-	-moz-animation: animateCloud 20s linear infinite;
-	animation: animateCloud 20s linear infinite;
-
-	-webkit-transform: scale(0.4);
-	-moz-transform: scale(0.4);
-	transform: scale(0.4);
+    -webkit-animation: animateCloud 20s linear infinite;
+    -moz-animation: animateCloud 20s linear infinite;
+    animation: animateCloud 20s linear infinite;
+    -webkit-transform: scale(0.4);
+    -moz-transform: scale(0.4);
+    transform: scale(0.4);
 }
 
 .x3 {
-	-webkit-animation: animateCloud 30s linear infinite;
-	-moz-animation: animateCloud 30s linear infinite;
-	animation: animateCloud 30s linear infinite;
-  animation-timing-function: ease-in-out;
-
-	-webkit-transform: scale(0.6);
-	-moz-transform: scale(0.6);
-	transform: scale(0.6);
+    -webkit-animation: animateCloud 30s linear infinite;
+    -moz-animation: animateCloud 30s linear infinite;
+    animation: animateCloud 30s linear infinite;
+    animation-timing-function: ease-in-out;
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    transform: scale(0.6);
 }
-
-
 
 .x4 {
-	-webkit-animation: animateCloud 40s infinite;
-	-moz-animation: animateCloud 40s  infinite;
-	animation: animateCloud 40s  infinite;
-  animation-timing-function: ease-in-out;
-
-	-webkit-transform: scale(0.8);
-	-moz-transform: scale(0.8);
-	transform: scale(0.8);
+    -webkit-animation: animateCloud 40s infinite;
+    -moz-animation: animateCloud 40s infinite;
+    animation: animateCloud 40s infinite;
+    animation-timing-function: ease-in-out;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
 }
-
 
 .x5 {
-	-webkit-animation: animateCloud 40s infinite;
-	-moz-animation: animateCloud 40s  infinite;
-	animation: animateCloud 40s  infinite;
-  animation-timing-function: ease-in-out;
-
-	-webkit-transform: scale(1.2);
-	-moz-transform: scale(1.2);
-	transform: scale(1.2);
+    -webkit-animation: animateCloud 40s infinite;
+    -moz-animation: animateCloud 40s infinite;
+    animation: animateCloud 40s infinite;
+    animation-timing-function: ease-in-out;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
 }
-
 
 .x6 {
-	-webkit-animation: animateCloud 40s infinite;
-	-moz-animation: animateCloud 40s  infinite;
-	animation: animateCloud 40s  infinite;
-  animation-timing-function: ease-in-out;
-
-	-webkit-transform: scale(1.4);
-	-moz-transform: scale(1.4);
-	transform: scale(1.4);
+    -webkit-animation: animateCloud 40s infinite;
+    -moz-animation: animateCloud 40s infinite;
+    animation: animateCloud 40s infinite;
+    animation-timing-function: ease-in-out;
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    transform: scale(1.4);
 }
 
-
-
 .rainDrop {
-  width: 1px;
-  height: 5px;
-  background-color: darkblue;
-  border-radius: 50%;
-  float:left;
-  position: relative;
-  -webkit-animation: rainFalls .5s linear infinite;
-  -moz-animation: rainFalls .5s linear infinite;
-  animation: rainFalls .5s linear infinite;
+    width: 1px;
+    height: 5px;
+    background-color: darkblue;
+    border-radius: 50%;
+    float: left;
+    position: relative;
+    -webkit-animation: rainFalls .5s linear infinite;
+    -moz-animation: rainFalls .5s linear infinite;
+    animation: rainFalls .5s linear infinite;
 }
 
 .rainDrop2 {
-  width: 1px;
-  height: 5px;
-  background-color: darkblue;
-  border-radius: 50%;
-  float:left;
-  position: relative;
-  -webkit-animation: rainFalls 3s linear infinite;
-  -moz-animation: rainFalls 3s linear infinite;
-  animation: rainFalls 3s linear infinite;
-  animation-delay:1s;
+    width: 1px;
+    height: 5px;
+    background-color: darkblue;
+    border-radius: 50%;
+    float: left;
+    position: relative;
+    -webkit-animation: rainFalls 3s linear infinite;
+    -moz-animation: rainFalls 3s linear infinite;
+    animation: rainFalls 3s linear infinite;
+    animation-delay: 1s;
 }
 
-.rainDrop:after{
-	content: '';
-	position: absolute;
+.rainDrop:after {
+    content: '';
+    position: absolute;
 }
-
 
 .rainDrop::after {
-  width:1.4px;
-  height: 3px;
-  background-color: darkblue;
-  border-radius: 100%;
-  float:left;
-  top:5px;
-
+    width: 1.4px;
+    height: 3px;
+    background-color: darkblue;
+    border-radius: 100%;
+    float: left;
+    top: 5px;
 }
-
 
 .rainDropSlow {
-  width: 1px;
-  height: 5px;
-  background-color: darkblue;
-  border-radius: 50%;
-  float:left;
-  position: relative;
-  -webkit-animation: rainFalls 1s linear infinite;
-  -moz-animation: rainFalls 1s linear infinite;
-  animation: rainFalls 1s linear infinite;
+    width: 1px;
+    height: 5px;
+    background-color: darkblue;
+    border-radius: 50%;
+    float: left;
+    position: relative;
+    -webkit-animation: rainFalls 1s linear infinite;
+    -moz-animation: rainFalls 1s linear infinite;
+    animation: rainFalls 1s linear infinite;
 }
 
-.rainDropSlow:after{
-	content: '';
-	position: absolute;
+.rainDropSlow:after {
+    content: '';
+    position: absolute;
 }
-
 
 .rainDropSlow::after {
-  width:1.4px;
-  height: 3px;
-  background-color: darkblue;
-  border-radius: 100%;
-  float:left;
-  top:5px;
-
+    width: 1.4px;
+    height: 3px;
+    background-color: darkblue;
+    border-radius: 100%;
+    float: left;
+    top: 5px;
 }
-
 
 
 /*
@@ -663,7 +548,6 @@ overflow-x: hidden;
     margin-left: -20px;
     margin-top: 20px;
 }
-
 .cloud::after {
     content: '';
     width: 100px;
@@ -675,5 +559,4 @@ overflow-x: hidden;
     margin-left: 30px;
     margin-top: 20px;
 }
-
 */
