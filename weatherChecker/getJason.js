@@ -150,6 +150,8 @@ document.addEventListener("DOMContentLoaded", function() {
         if (weather.indexOf("Rain") >= 0) {
             body.setAttribute("class", "rain");
             clouds.style.display = 'none';
+            gamePopup.remove();
+            gamePopupTimer.remove();
             //weatherIco.setAttribute("class", "cloud");
             rainS.style.display = 'block';
 
