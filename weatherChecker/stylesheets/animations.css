@@ -68,7 +68,7 @@
 }
 
 
-@keyframes sunAnimate {
+@keyframes mymove {
     0%   {border: 20px solid #f1c40f;}
     100% {border: 20px solid #FF6600;}
 }
