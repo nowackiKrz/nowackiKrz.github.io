@@ -195,6 +195,8 @@ document.addEventListener("DOMContentLoaded", function() {
             weatherIco.setAttribute("class", "sun");
             clouds.style.display = "none";
             rainS.style.display = 'none';
+            gamePopup.remove();
+            gamePopupTimer.remove();
         }
     }
 
@@ -284,7 +286,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     searchButton.addEventListener("click", function(event) {
         badgeClouds.style.display = 'none';
-        gamePopup.innerText = "";
         rainbows.remove();
 
         input = document.querySelector("#input");
