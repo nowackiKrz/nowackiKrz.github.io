@@ -283,7 +283,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     searchButton.addEventListener("click", function(event) {
-        badgeClouds.style.display = 'none'
+        badgeClouds.style.display = 'none';
+        gamePopup.innerText = "";
         rainbows.remove();
 
         input = document.querySelector("#input");
