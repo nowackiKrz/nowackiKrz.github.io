@@ -402,7 +402,7 @@ overflow-x: hidden;
     position: relative;
     border: 20px solid #f1c40f;
     border-radius: 100%;
-    animation: sunAnimate 2s infinite;
+    animation: mymove 2s infinite;
 
 }
 
