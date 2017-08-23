@@ -43,6 +43,12 @@ body {
     animation: 7s linear menuDisplay;
     font-size: 60px;
     font-family: 'Pacifico', cursive;
+    color: #551a8b;
+}
+
+a:active {
+  color: #551a8b;
+  text-decoration: none;
 }
 
 @media (max-width: 900px) {
