@@ -12,9 +12,10 @@
     outline: 0;
 }
 
-title {
-  font-family: 'Pacifico', cursive;
-}
+
+
+
+title { display: block; font-family: 'Pacifico', cursive; font-weight: bold; }
 
 .invisible {
     display: none;
