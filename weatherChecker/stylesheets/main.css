@@ -54,7 +54,7 @@ a:active {
 @media (max-width: 900px) {
     .searchMenu {
         animation: 3s linear menuDisplay;
-        font-size: 32px;
+        font-size: 42px;
     }
 }
 
