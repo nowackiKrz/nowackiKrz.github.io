@@ -9840,20 +9840,17 @@ var JobAdd = function (_React$Component) {
       companyName: " ",
       jobDescription: " ",
       applyEmail: " ",
-      add: [],
-      cookies: new _universalCookie2.default()
+      add: []
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
-  //const cookies = new Cookies();
-
 
   _createClass(JobAdd, [{
     key: 'getCookie',
     value: function getCookie() {
-
-      this.state.cookies.set('myAdd', this.state.add, { path: '/' });
-      console.log(this.state.cookies.get('myAdd'));
-      console.log(this.state.cookies);
+      var cookies = new _universalCookie2.default();
+      cookies.set('myAdd', this.state.add, { path: '/' });
+      var myAdd = cookies.get('myAdd');
+      console.log(myAdd);
     }
   }, {
     key: 'handleChangeCompanyName',
