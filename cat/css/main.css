@@ -1,0 +1,50 @@
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5jc3MiLCJzb3VyY2VzIjpbIm1haW4uc2NzcyJdLCJzb3VyY2VzQ29udGVudCI6WyJcbiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIn0= */
+
+@import url('https://fonts.googleapis.com/css?family=Arvo|Kaushan+Script|Pacifico|Zilla+Slab+Highlight');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 1.4em;
+    vertical-align: baseline;
+    text-decoration: none;
+    outline: 0;
+}
+
+body {
+  background-color: #7abacd;
+  height: 800px;
+  width: 800px;
+}
+
+.mainContainer {
+  margin: 0 auto;
+  width: 50vw;
+  font-family: "Open Sans";
+  font-size: 12px;
+}
+
+
+button {
+  background-color: lightblue;
+  padding: 2px;
+  border-radius: 2px;
+  font-size: 10px;
+}
+
+input {
+  background-color: #c998aa;
+}
+
+input::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: lightgrey;
+}
+
+textarea {
+    background-color: lightgrey;
+}
