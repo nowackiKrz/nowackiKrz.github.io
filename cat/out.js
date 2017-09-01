@@ -9843,7 +9843,12 @@ var JobAdd = function (_React$Component) {
       jobDescription: " ",
       applyEmail: " ",
       add: [],
+      addPhoto: {
+        photo1: "http://pngimg.com/uploads/cat/cat_PNG106.png",
+        photo2: "http://clipart-library.com/image_gallery2/Kitten.png"
+      },
       cookies: []
+
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -9953,27 +9958,22 @@ var Listing = function (_React$Component2) {
       var elements = this.props.adds.map(function (element, index) {
         console.log(_this4.props.adds);
         return _react2.default.createElement(
-          'div',
-          null,
+          'li',
+          { key: index },
+          element.name,
+          _react2.default.createElement('br', null),
+          ' ',
+          element.jobDescription,
+          _react2.default.createElement('br', null),
+          ' ',
+          element.applyEmail,
           _react2.default.createElement('br', null),
           _react2.default.createElement(
-            'li',
-            { key: index },
-            element.name,
-            _react2.default.createElement('br', null),
-            ' ',
-            element.jobDescription,
-            _react2.default.createElement('br', null),
-            ' ',
-            element.applyEmail,
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              'button',
-              { type: 'button' },
-              'share on Facebook'
-            ),
-            _react2.default.createElement('br', null)
-          )
+            'button',
+            { type: 'button' },
+            'share on Facebook'
+          ),
+          _react2.default.createElement('br', null)
         );
       });
       return _react2.default.createElement(
