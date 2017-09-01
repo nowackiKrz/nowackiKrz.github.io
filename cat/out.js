@@ -9849,8 +9849,8 @@ var JobAdd = function (_React$Component) {
     value: function getCookie() {
       var cookies = new _universalCookie2.default();
       cookies.set('myAdd', this.state.add, { path: '/' });
-      console.log(cookies.get('myAdd')); // Pacman
-
+      console.log(cookies.get('myAdd'));
+      console.log(cookies.get('cookies'));
     }
   }, {
     key: 'handleChangeCompanyName',
