@@ -9854,10 +9854,8 @@ var JobAdd = function (_React$Component) {
       //cookies.set('myAdd', this.state.add, {path: '/'});
       //this.setState({cookies: cookies.get('myAdd')});
       this.setState({ cookies: cookies.set('myAdd', this.state.add, { path: '/' }) });
-      if (this.state.cookies[0].name != undefined) {
-        console.log(this.state.cookies[0].name);
-        console.log(this.state.cookies[0].jobDescription);
-      }
+
+      console.log(this.state.cookies);
     }
   }, {
     key: 'handleChangeCompanyName',
@@ -9955,17 +9953,27 @@ var Listing = function (_React$Component2) {
       var elements = this.props.adds.map(function (element, index) {
         console.log(_this4.props.adds);
         return _react2.default.createElement(
-          'li',
-          { key: index },
-          element.name,
+          'div',
+          null,
           _react2.default.createElement('br', null),
-          ' ',
-          element.jobDescription,
-          _react2.default.createElement('br', null),
-          ' ',
-          element.applyEmail,
-          _react2.default.createElement('br', null),
-          _react2.default.createElement('br', null)
+          _react2.default.createElement(
+            'li',
+            { key: index },
+            element.name,
+            _react2.default.createElement('br', null),
+            ' ',
+            element.jobDescription,
+            _react2.default.createElement('br', null),
+            ' ',
+            element.applyEmail,
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'button',
+              { type: 'button' },
+              'share on Facebook'
+            ),
+            _react2.default.createElement('br', null)
+          )
         );
       });
       return _react2.default.createElement(
