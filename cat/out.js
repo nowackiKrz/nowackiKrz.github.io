@@ -9822,8 +9822,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
   */
 }
 
-var cookies = new _universalCookie2.default();
-
 var JobAdd = function (_React$Component) {
   _inherits(JobAdd, _React$Component);
 
@@ -9842,12 +9840,7 @@ var JobAdd = function (_React$Component) {
       companyName: " ",
       jobDescription: " ",
       applyEmail: " ",
-      add: [],
-      addPhoto: {
-        photo1: "http://pngimg.com/uploads/cat/cat_PNG106.png",
-        photo2: "http://clipart-library.com/image_gallery2/Kitten.png"
-      },
-      cookies: []
+      add: []
 
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
@@ -9855,7 +9848,7 @@ var JobAdd = function (_React$Component) {
   _createClass(JobAdd, [{
     key: 'getCookie',
     value: function getCookie() {
-
+      var cookies = new _universalCookie2.default();
       //cookies.set('myAdd', this.state.add, {path: '/'});
       //this.setState({cookies: cookies.get('myAdd')});
       this.setState({ cookies: cookies.set('myAdd', this.state.add, { path: '/' }) });
