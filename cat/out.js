@@ -9840,7 +9840,8 @@ var JobAdd = function (_React$Component) {
       companyName: " ",
       jobDescription: " ",
       applyEmail: " ",
-      add: []
+      add: [],
+      cookies: []
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -9849,8 +9850,8 @@ var JobAdd = function (_React$Component) {
     value: function getCookie() {
       var cookies = new _universalCookie2.default();
       cookies.set('myAdd', this.state.add, { path: '/' });
-      var myAdd = cookies.get('myAdd');
-      console.log(myAdd);
+      this.setState({ cookies: cookies.get('myAdd') });
+      console.log(this.state.cookies);
     }
   }, {
     key: 'handleChangeCompanyName',
@@ -9900,7 +9901,7 @@ var JobAdd = function (_React$Component) {
             return _this2.handleChangeDescription(e, 2);
           } }),
         _react2.default.createElement('br', null),
-        'email: ',
+        'email:',
         _react2.default.createElement('br', null),
         _react2.default.createElement('input', { className: 'jobInput', type: 'email', name: 'email', placeholder: 'Email', value: this.state.applyEmail, onChange: function onChange(e) {
             return _this2.handleChangeEmail(e, 3);
@@ -9951,18 +9952,14 @@ var Listing = function (_React$Component2) {
           'li',
           { key: index },
           element.name,
-          ' ',
           _react2.default.createElement('br', null),
           ' ',
           element.jobDescription,
-          ' ',
           _react2.default.createElement('br', null),
-          '  ',
+          ' ',
           element.applyEmail,
           _react2.default.createElement('br', null),
-          ' ',
-          _react2.default.createElement('br', null),
-          ' '
+          _react2.default.createElement('br', null)
         );
       });
       return _react2.default.createElement(
