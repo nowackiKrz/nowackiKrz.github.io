@@ -160,7 +160,7 @@ var JobAdd = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        'Opis',
+        'Nazwa',
         _react2.default.createElement('br', null),
         _react2.default.createElement('input', { className: 'jobInput', type: 'text', name: 'companyName', placeholder: 'Company name', value: this.state.companyName, onChange: function onChange(e) {
             return _this2.handleChangeCompanyName(e, 1);
