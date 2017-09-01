@@ -9850,7 +9850,7 @@ var JobAdd = function (_React$Component) {
       var cookies = new _universalCookie2.default();
       cookies.set('myAdd', this.state.add, { path: '/' });
       console.log(cookies.get('myAdd'));
-      console.log(cookies.get('cookies'));
+      console.log(cookies);
     }
   }, {
     key: 'handleChangeCompanyName',
