@@ -9822,6 +9822,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
   */
 }
 
+var cookies = new _universalCookie2.default();
+
 var JobAdd = function (_React$Component) {
   _inherits(JobAdd, _React$Component);
 
@@ -9848,10 +9850,14 @@ var JobAdd = function (_React$Component) {
   _createClass(JobAdd, [{
     key: 'getCookie',
     value: function getCookie() {
-      var cookies = new _universalCookie2.default();
-      cookies.set('myAdd', this.state.add, { path: '/' });
-      this.setState({ cookies: cookies.get('myAdd') });
-      console.log(this.state.cookies);
+
+      //cookies.set('myAdd', this.state.add, {path: '/'});
+      //this.setState({cookies: cookies.get('myAdd')});
+      this.setState({ cookies: cookies.set('myAdd', this.state.add, { path: '/' }) });
+      if (this.state.cookies[0].name != undefined) {
+        console.log(this.state.cookies[0].name);
+        console.log(this.state.cookies[0].jobDescription);
+      }
     }
   }, {
     key: 'handleChangeCompanyName',
